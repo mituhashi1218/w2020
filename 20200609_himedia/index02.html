@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>HIMEDIA2</title>
+	<style>
+		/*reset*/
+		*{margin:0;padding:0;box-sizing:border-box;}
+		a:link,a:visited{color:#000;text-decoration:none}
+		li{list-style:none}
+	</style>
+
+		<link rel="stylesheet" href="../bxslider/css/jquery.bxslider.css">
+
+		<script src="../bxslider/js/jquery-3.1.1.min.js"></script>
+		<script src="../bxslider/js/jquery.bxslider.js"></script>
+	<style>
+		div.visual{width: 1200px;margin:0 auto;}
+		/*header*/
+		body{background-color:#fbf0e0;}
+		div.headertop{width: 980px;height: 75px;background-color:#fbf0e0;margin:0 auto;}
+		div.headertop>h2.logo{text-align:center;line-height:75px}
+		/*menu*/
+		nav.gnbWrap{background-color: #974f09;}
+		nav.gnbWrap>ul{width: 980px;margin:0 auto;}
+		nav.gnbWrap>ul:after{content:"";clear:both;display:block;}
+		nav.gnbWrap>ul>li{float:left;width: 16.666%;border-right:1px solid #b08c69;}
+		nav.gnbWrap>ul>li:first-child{border-left:1px solid #b08c69;}
+		nav.gnbWrap>ul>li>a{color:#fff;display:block;text-align:center;height: 45px;line-height:45px}
+		nav.gnbWrap>ul>li>a:hover{background-color:#753e08;}
+		/*visualWrap*/
+/*		div.visualWrap{height: 400px;background-color: #2e2f2a;background-image:url(Images/visual_bg04.jpg);background-repeat:no-repeat;background-position:center;}*/
+		/*section*/
+			div.section{height: 195px;background-color: #e5d8c6;}
+			ul.card{width: 980px;margin:0 auto;}
+			ul.card:after{content:"";clear:both;display:block;}
+			ul.card>li{float:left;width: 20%;height: 195px;text-align:center;color:#fff;padding:20px;}
+			ul.card>li:nth-child(1){background-color: #de9903;}
+			ul.card>li:nth-child(2){background-color: #de7a03;}
+			ul.card>li:nth-child(3){background-color: #de3c03;}
+			ul.card>li:nth-child(4){background-color: #d89b5a;}
+			ul.card>li:nth-child(5){background-color: #de0903;}
+			ul.card>li>img{margin-bottom: 13px;}
+			ul.card>li>p{font-size:11px;}
+			ul.card>li>h3{margin:7px;}
+	</style>
+	<script>
+		$(document).ready
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true});
+		});
+	</script>
+</head>
+<body>
+	<div class="headertop">
+		<h2 class="logo"><a href="#">HIMEDIA</a></h2>
+	</div>
+	<nav class="gnbWrap">
+		<ul>
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">제품소개</a></li>
+			<li><a href="#">사업영역</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#">사회공헌</a></li>
+			<li><a href="#">인재채용</a></li>
+		</ul>
+	</nav>
+	<div class="visual">
+		<ul class="slider">
+			<li><img src="../bxslider/images/pc04.jpg" alt="image1"></li>
+			<li><img src="../bxslider/images/pc05.jpg" alt="image2"></li>
+			<li><img src="../bxslider/images/pc06.jpg" alt="image3"></li>
+		</ul>
+	</div>
+	<div class="section">
+	<ul class="card">
+		<li><img src="Images/icon01.png" alt="사회공헌"><h3>사회공헌</h3><p>소외된 이웃과 함께합니다.</p></li>
+		<li><img src="Images/icon02.png" alt="윤리경영"><h3>윤리경영</h3><p>공정한 경쟁을 추구합니다.</p></li>
+		<li><img src="Images/icon03.png" alt="인재채용"><h3>인재채용</h3><p>열정 넘치는 인재를 모십니다.</p></li>
+		<li><img src="Images/icon04.png" alt="기업문화"><h3>기업문화</h3><p>유자의 가치를 소개합니다.</p></li>
+		<li><img src="Images/icon05.png" alt="사회공헌"><h3>사회공헌</h3><p>유자는 미래를 선도합니다.</p></li>
+	</ul>
+</div>
+
+</body>
+</html>
