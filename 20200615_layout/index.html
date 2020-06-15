@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../bxslider/css/reset.css">
+	<link rel="stylesheet" href="../bxslider/css/jquery.bxslider.css">
+	<script src="../bxslider/js/jquery-3.1.1.min.js"></script>
+	<script src="../bxslider/js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true,pager:false,mode:"fade"});
+		});
+	</script>
+	<style>
+		body{background-image:url(../images/bg_grid.gif);}
+		.boxWrap{width: 410px;_height: 210px;background-color:skyblue;}
+		.boxWrap .box1,.boxWrap .box2{width: 200px;height: 200px;color:#fff;float: left;}
+		.boxWrap .box1{background-color:red;}
+		.boxWrap .box2{background-color:blue;}
+		.box3{height: 200px;background-color:pink;}
+		.boxWrap .clear{height: 10px;clear: both;}
+
+		.boxWrap:after{content:"";clear: both;display: block;}
+		.clearfix:after{content:"";display: block;clear: both;}
+		.box3:after{content:"입니다.";display: block;}
+		.box3:before{content:"핑크는 ";display: block;}
+	</style>
+</head>
+<body>
+	<div class="boxWrap clearfix">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+<!-- 		<div class="clear"></div> -->
+	</div>
+
+	<div class="box3">box3</div>
+	<style>
+		.orange{background-color:#f98819;}
+		.skyblue{background-color:skyblue;}
+		.red{background-color:red;}
+		.wrap1{width: 1000px;margin:10px auto;}
+		.wrap1 .left,.wrap1 .right{width: 100px;height: 100px;}
+		.wrap1 .left{float: left;}
+		.wrap1 .right{float: right;}
+
+		.wrap2{width: 1000px;margin:0 auto;}
+		.wrap2 li{float: left;width: 20%;}
+		.wrap2 li>a{display: block;text-align: center;line-height:40px;}
+		.wrap2 li>a:hover{background-color:blue;color:#fff;}
+	</style>
+	<h3>1.float</h3>
+	<div class="wrap1 orange clearfix">
+		<div class="left skyblue">left</div>
+		<div class="right red">right</div>
+	</div>
+	<h3>2.float nav</h3>
+	<div class="wrap2 red">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+	<style>
+		.headerWrap{width: 1000px;margin:0 auto;background-color:orange;}
+		.logo{text-align: center;}
+		.gnbMenu{width: 1000px;background-color:skyblue;}
+		.gnbMenu ul li{float: left;width: 20%;}
+		.gnbMenu ul li a{display: block;text-align: center;line-height: 40px;}
+		.gnbMenu ul li a:hover{background-color:red;color:#fff;}
+	</style>
+
+	<h3>3.header</h3>
+	<div class="headerWrap">
+		<h2 class="logo">logo</h2>
+		<div class="gnbMenu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</div>
+	</div>
+
+		<style>
+		.headerWrap2{width: 1000px;margin:0 auto;background-color:aqua;}
+		.headerWrap2 .logo{text-align: center;}
+		.headerWrap2 .gnbMenu{width: 1000px;background-color:pink;}
+		.headerWrap2 .gnbMenu ul li{float: left;width: 20%;}
+		.headerWrap2 .gnbMenu ul li a{display: block;text-align: center;line-height: 40px;}
+		.headerWrap2 .gnbMenu ul li a:hover{background-color:red;color:#fff;}
+		.sliderWrap{width: 1100px;margin:0 auto;}
+
+		.conWrap{width: 1000px;height: 400px;margin:0 auto;}
+		.conWrap ul li:after{content:"";display: block;clear: both;}
+		.conWrap ul li{height: 300px;float: left;}
+		.conWrap .card1{width: 330px;background-color:gray;margin-right:30px;}
+		.conWrap .card2{width: 630px;background-color:magenta;}
+		footer .footerWrap{width: 1000px;height:200px;margin:0 auto;background-color:#353635;text-align: center;}
+		.footerTop{width: 1000px;height: 50px;background-color:#929492;color:#fff;}
+		.footerBottom{color:#fff;}
+	</style>
+<br>
+<br>
+	<h4>4.float mainpage layout</h4>
+	<div class="headerWrap2">
+		<h2 class="logo">logo</h2>
+		<div class="gnbMenu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class="sliderWrap">
+			<ul class="slider">
+				<li><img src="../bxslider/images/pc04.jpg" alt="image1"></li>
+				<li><img src="../bxslider/images/pc05.jpg" alt="image2"></li>
+			</ul>
+		</div>
+	<div class="conWrap">
+		<ul class="clearfix">
+			<li class="card1">aside</li>
+			<li class="card2">content</li>
+		</ul>
+	</div>
+	<footer>
+	<div class="footerWrap">
+		<div class="footerTop">
+			<ul>
+				<li>footertop</li>
+			</ul>
+		</div>
+		<div class="footerBottom">
+			<ul>
+				<li>footerbottom</li>
+			</ul>
+		</div>
+	</div>
+	</footer>
+</body>
+</html>

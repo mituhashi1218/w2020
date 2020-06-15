@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>slider tab</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true,controls:false,pagerCustom:".bx-pager"});
+	});
+	</script>
+	<style>
+		.wrapper{width: 1200px;height: 740px;margin:0 auto;position: relative;}
+		.bx-pager{position: absolute;bottom: 0;line-height: 45px;}
+		.bx-pager a{width:200px;display: block;float: left;text-align: center;background-color:#c99a0b;color:#fff;font-size:1.5em;}
+		.bx-pager a.active{background-color: #ffc30b;}
+		div.sliderWrap{width: 1200px;margin:0 auto;}
+
+		.bx-wrapper {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    border:none;
+    background: #fff;
+    margin-bottom: 0;
+}
+		.sliderWrap{margin:0 auto;}
+		.sliderWrap .txtWrap{background-color:#ffc30b;width:400px;height:200px;position:absolute;top:150px;right:100px;}
+		.sliderWrap .txtWrap h2{font-size:1.8em;}
+		.sliderWrap .txtWrap h2:after{content:"";display: block;border: 1px solid #000;margin:20px 0;}
+		.sliderWrap .txtWrap p{margin-bottom: 20px;}
+		.sliderWrap .txtWrap a{background-color:rgb(0,0,0,0);width: 200px;height: 40px;display: block;text-align: center;line-height: 40px;border: 1px solid #000;border-radius: 30px;font-weight:bold}
+		.sliderWrap .txtWrap a:hover{background-color:rgb(0,0,0,1);color:#fff;}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="sliderWrap">
+		<ul class="slider">
+			<li><img src="images/main_slider01.jpg" alt="slider"><div class="txtWrap">
+				<h2>Lorem ipsum dolor1.</h2><p>Lorem ipsum dolor sit amet, consectetur.</p><a href="#">바로가기</a>
+			</div></li>
+			<li><img src="images/main_slider01.jpg" alt="slider"><div class="txtWrap">
+				<h2>Lorem ipsum dolor2.</h2><p>Lorem ipsum dolor sit amet, consectetur.</p><a href="#">바로가기</a>
+			</div></li>
+			<li><img src="images/main_slider01.jpg" alt="slider"><div class="txtWrap">
+				<h2>Lorem ipsum dolor3.</h2><p>Lorem ipsum dolor sit amet, consectetur.</p><a href="#">바로가기</a>
+			</div></li>
+			<li><img src="images/main_slider01.jpg" alt="slider"><div class="txtWrap">
+				<h2>Lorem ipsum dolor4.</h2><p>Lorem ipsum dolor sit amet, consectetur.</p><a href="#">바로가기</a>
+			</div></li>
+			<li><img src="images/main_slider01.jpg" alt="slider"><div class="txtWrap">
+				<h2>Lorem ipsum dolor5.</h2><p>Lorem ipsum dolor sit amet, consectetur.</p><a href="#">바로가기</a>
+			</div></li>
+			<li><img src="images/main_slider01.jpg" alt="slider"><div class="txtWrap">
+				<h2>Lorem ipsum dolor6.</h2><p>Lorem ipsum dolor sit amet, consectetur.</p><a href="#">바로가기</a>
+			</div></li>
+		</ul>
+	</div>
+	<div class="bx-pager clearfix">
+		<a href="#" data-slide-index="0">menu1</a>
+		<a href="#" data-slide-index="1">menu2</a>
+		<a href="#" data-slide-index="2">menu3</a>
+		<a href="#" data-slide-index="3">menu4</a>
+		<a href="#" data-slide-index="4">menu5</a>
+		<a href="#" data-slide-index="5">menu6</a>
+	</div>
+</div>
+</body>
+</html>
