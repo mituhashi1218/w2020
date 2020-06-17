@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<link rel="stylesheet" href="../bxslider/css/reset.css">
+	<style>
+		.box{
+			width: 300px;height: 300px;
+			position: relative;overflow:hidden;
+		}
+		.box img{display: block;}
+		.box .overlay{
+			width: 300px;height: 300px;
+			background-color:rgba(0,0,0,0.3);
+			position: absolute;
+			transition:0.2s;
+			color:white;top:250px;
+		}
+		.box:hover .overlay{top:0;}
+		.box .txt{
+			text-align: center;padding-top:10px;
+			padding-left: 20px;padding-right: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+		<div class="overlay">
+			<div class="txt">
+			Lorem ipsum. <br><br>
+
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, corporis.
+
+		</div>
+		</div>
+	</div>
+
+	<style>
+		.container{width: 1200px;margin:0 auto;padding:30px 0;}
+		.container h2{text-align: center;}
+		.container h2:after{content:"";display: block;width: 300px;height: 2px;background-color: #888;margin:10px auto;}
+		.container p{text-align: center;}
+		.container .hdTitle{margin-bottom: 20px;}		
+		.container ul.content li{float: left;width:281.25px;margin-right: 25px;position: relative;overflow: hidden;border-radius:50px 0 0 50px}
+		.container ul.content .overlay{width:281.25px;height:281.25px;position: absolute;transition:0.3s;top: 300px;}
+		.container ul.content li img{width: 100%;}
+		.container ul.content li:last-child{margin-right:0;}
+		.container ul.content li:hover .overlay{top: 0;}
+		.bgOne{/*background-color:skyblue;background-image:url(../images/pc01.jpg);background-repeat:no-repeat;background-position:center;background-size:cover;background-attachment:fixed;*/background: #000 url(../images/pc01.jpg) no-repeat center fixed;background-size:cover;}
+		.red{background-color:rgba(255,0,0,0.3);}
+		.green{background-color:rgba(0,0,255,0.3);}
+		.blue{background-color:rgba(0,255,0,0.3);}
+
+	</style>
+<div class="container">
+		<div class="hdTitle"><h2>GALLERY</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, dolores.</p></div>
+	<ul class="content clearfix">
+		<li><img src="../images/testimg.jpg" alt=""><div class="overlay green"><div class="txt">Lorem ipsum.</div></div></li>
+		<li><img src="../images/testimg.jpg" alt=""><div class="overlay green"><div class="txt">Lorem ipsum.</div></div></li>
+		<li><img src="../images/testimg.jpg" alt=""><div class="overlay green"><div class="txt">Lorem ipsum.</div></div></li>
+		<li><img src="../images/testimg.jpg" alt=""><div class="overlay green"><div class="txt">Lorem ipsum.</div></div></li>
+	</ul>
+</div>
+<div class="conWrap bgOne">
+	<div class="container">
+			<div class="hdTitle"><h2>GALLERY</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, dolores.</p></div>
+		<ul class="content clearfix">
+			<li><img src="../images/testimg.jpg" alt=""><div class="overlay red"><div class="txt">Lorem ipsum.</div></div></li>
+			<li><img src="../images/testimg.jpg" alt=""><div class="overlay red"><div class="txt">Lorem ipsum.</div></div></li>
+			<li><img src="../images/testimg.jpg" alt=""><div class="overlay red"><div class="txt">Lorem ipsum.</div></div></li>
+			<li><img src="../images/testimg.jpg" alt=""><div class="overlay red"><div class="txt">Lorem ipsum.</div></div></li>
+		</ul>
+	</div>
+</div>
+	<div class="container">
+		<div class="hdTitle"><h2>GALLERY</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, dolores.</p></div>
+	<ul class="content clearfix">
+		<li><img src="../images/testimg.jpg" alt=""><div class="overlay blue"><div class="txt">Lorem ipsum.</div></div></li>
+		<li><img src="../images/testimg.jpg" alt=""><div class="overlay blue"><div class="txt">Lorem ipsum.</div></div></li>
+		<li><img src="../images/testimg.jpg" alt=""><div class="overlay blue"><div class="txt">Lorem ipsum.</div></div></li>
+		<li><img src="../images/testimg.jpg" alt=""><div class="overlay blue"><div class="txt">Lorem ipsum.</div></div></li>
+	</ul>
+</div>
+</body>
+</html> 

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../bxslider/css/reset.css">
+	<link rel="stylesheet" href="../bxslider/css/jquery.bxslider.css">
+	<style>
+		.box {width: 300px;margin:0 auto;position: relative;overflow: hidden;cursor: pointer;display:none;}
+		.box img{display: block;} 
+		.box .overlay{width: 300px;height: 300px;background-color:rgba(0,0,0,0.5);position: absolute;top:0px;transition:0.3s;opacity:0.5;}
+		.box:hover .overlay{top: 0;opacity: 1;background-color:rgba(255,0,0,0.5);}
+		.box .overlay .txt{width: 120px;height: 120px;line-height: 120px;text-align: center;background-color: #fff;position: absolute;left: 50%;margin-left:-60px;top: 50%;margin-top:-60px;border-radius:60px}
+
+		.container{width: 1200px;margin:0px auto;padding:50px 0;}
+		.container h2{text-align: center;position: relative;}
+		.container h2:after{content:"";display: block;width: 10px;height: 10px;background-color:#000;position: absolute;top: -10px;left: 50%;border-radius:5px;margin-left: -5px;}
+		.container p{text-align: center;color: #666;margin-bottom: 25px;}
+		.container .content li{float: left;width: 281.25px;margin-right: 25px;position: relative;cursor: pointer;}
+		.container .content li:last-child{margin-right: 0;}
+		.container .content img{width: 100%;}
+		.container .content .overlay{width: 281.25px;height: 281.25px;background-color:rgba(0,0,0,0.5);position: absolute;top: 0;overflow: hidden;/*display: none*/transition:0.3s;opacity:0;}
+		.container .content .overlay .txt{width: 150px;height: 150px;text-align: center;line-height: 150px;background-color: #000;color:#fff;border-radius:75px;left: 50%;top: 50%;margin-left: -75px;margin-top: -75px;position: absolute;}
+		.container .content li:hover .overlay{display: block;opacity: 1;}
+		.bgOne{background-color:#5d5d5d;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+		<div class="overlay">
+			<div class="txt">Lorem ipsum.</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h2>GALLERY</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, architecto.</p>
+	<div class="content">
+		<ul class="clearfix">
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li><img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	</div>
+
+	<div class="wrap bgOne">
+		<div class="container">
+			<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, architecto.</p>
+		<div class="content">
+			<ul class="clearfix">
+				<li><img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li><img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li><img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li><img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+
+	<div class="container">
+	<h2>GALLERY</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, architecto.</p>
+<div class="content">
+	<ul class="clearfix">
+		<li><img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>
+		<li><img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>
+		<li><img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>
+		<li><img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>
+	</ul>
+</div>
+	</div>
+
+</body>
+</html>
