@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animate_css</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="../js/wow.js"></script>
+	<script>
+		new WOW().init()
+	</script>
+	<style>
+		.box{width: 500px;height: 130px;/*background:skyblue*/;text-align: center;}
+		.gap{height: 2000px;}
+		.container{width: 1000px;height: 300px;margin:0 auto;}
+		.container ul li{float: left;margin-right:25px;width:231.25px;height: 231.25px;background:orange;border-radius:10px;margin-top:40px;}
+		.container ul li:last-child{margin-right:0;}
+		.gray{background: #ddd;}
+		.circle{border-radius:120px !important}
+	</style>
+</head>
+<body>
+	<div class="box animated bounceInDown">
+		<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, nobis!</h1>
+	</div>
+	<div class="gap"></div>
+	<div class="wrap gray wow">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="circle wow zoomInDown" data-wow-delay="0">lorem1</li>
+				<li class="circle wow zoomInDown" data-wow-delay="0.3s">lorem1</li>
+				<li class="circle wow zoomInDown" data-wow-delay="0.6s">lorem1</li>
+				<li class="circle wow zoomInDown" data-wow-delay="0.9s">lorem1</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="wow bounceInLeft" data-wow-delay="1.3s">lorem1</li>
+				<li class="wow bounceInUp" data-wow-delay="1.6s">lorem1</li>
+				<li class="wow bounceInDown" data-wow-delay="1.9s">lorem1</li>
+				<li class="wow bounceInRight" data-wow-delay="2.2s">lorem1</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap gray">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="circle wow fadeInLeft" data-wow-delay="2.6s">lorem1</li>
+				<li class="circle wow fadeInDown" data-wow-delay="2.9s">lorem1</li>
+				<li class="circle wow fadeInUp" data-wow-delay="3.2s">lorem1</li>
+				<li class="circle wow fadeInRight" data-wow-delay="3.5s">lorem1</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="2.0s">lorem1</li>
+				<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="2.2s">lorem1</li>
+				<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="2.4s">lorem1</li>
+				<li class="wow pulse" data-wow-iteration="infinite" data-wow-delay="2.6s">lorem1</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
