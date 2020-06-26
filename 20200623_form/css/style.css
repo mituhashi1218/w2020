@@ -42,4 +42,36 @@ text-indent:-9999px
    cursor:pointer;
 }
 
-.w458{width: 458px;:!important;}
+
+#content fieldset .field .btn-label{display: block;width: 212px;height: 31px;
+   border: 1px solid #dcdcdc;text-align: center;line-height:31px;background: #fff;
+   cursor: pointer;position: absolute;top: 8px;}
+#content fieldset .field .btn-label.male{left: 15px;}
+#content fieldset .field .btn-label.female{right: 15px;}
+#content fieldset .field .btn-label.on{background:skyblue;}
+#content fieldset .field.btn-radio{height: 49px;}
+#content fieldset .field.btn-radio input{position: relative;left: 50px;top: 14px;}
+
+#content fieldset .field.birth label{float: left;width: 53px;height: 49px;
+   border-right:1px solid #eee;color:#999;text-align: center;line-height: 49px;}
+#content fieldset .field.birth input,
+#content fieldset .field.confirm input{float: left;}
+#content fieldset .field.birth .field-wall,
+#content fieldset .field.confirm .field-wall{float: left;width: 0;height: 29px;border-right: 1px solid #cdcdcd;
+text-indent:-9999px;margin-top: 10px;}
+#content fieldset div.birth select,
+#content fieldset div.confirm select{float: left;width: 110px;height: 29px;border-top:0 none;line-height: 29px;
+margin-top: 10px;margin-left: 17px;}
+#content fieldset div.confirm .btn-click{width: 99px;height: 31px;border: 1px solid #dcdcdc;background: #fff;
+cursor: pointer;position: absolute;top: 8px;right: 15px;}
+
+
+
+
+.w458{width: 458px !important;}
+.w303{width: 303px !important;}
+.w205{width: 205px !important;}
+.w145{width: 145px !important;}
+.w130{width: 130px !important;}
+
+
