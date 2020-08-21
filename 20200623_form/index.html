@@ -3,23 +3,26 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<title>문서 제목</title>
+	<title>form</title>
+	
 </head>
 <body>
 	<form action="welcome.php" method="get">
 		<fieldset>
 			<legend>기본정보</legend>
-<!-- 			<input type="checkbox" name="fav1" value="sc">축구
-			<input type="checkbox" name="fav2" value="basket">농구
-			<input type="checkbox" name="fav3" value="volley">배구
-			<input type="checkbox" name="fav4" value="base">야구
+			<!-- <input type="checkbox" name="fav1" value="sc">축구 
+			<input type="checkbox" name="fav2" value="ba">야구
+			<input type="checkbox" name="fav3" value="bb">농구
 
-			<input type="radio" name="sex" value="male">남자
-			<input type="radio" name="sex" value="female">여자 -->
-			<label for="na">이름</label>
-			<input type="text" name="name" id="na"><br>
+			<input type="radio" name="sex" value="male">남성
+			<input type="radio" name="sex" value="female">여성 -->
+			<label for="na">이름  </label> <!-- 입력요소의제목 -->
+			<input type="text" name="name" value="" id="na"> <!-- for와id똑같이
+			지정해야함 제목클릭하면 칸에 자동 커서뜸-->
+			<br>
 			<label for="email">이메일</label>
 			<input type="text" name="mail" id="email">
+
 		</fieldset>
 		<input type="submit" value="보내기">
 	</form>

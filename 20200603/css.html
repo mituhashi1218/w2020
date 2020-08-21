@@ -4,37 +4,42 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<title>css</title>
-<!-- 	<link rel="stylesheet" href="style.css"> -->
-<style>
-	/*@import url("style.css");*/
-	@import "style.css";
-	ul{color:red;}
-	#nav{color:white;}
-	/*    * < tag name < class name < id name < inline style < !important   */
-	ul#nav1>li{color:red;}
-	ul#nav1 li{color:red;}
-	ul#nav1>li>a{color:red;}
-	ul#nav1 a{color:red;}
-</style>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<style>
+		/*@import url("style.css"); 외부스타일시트*/
+		@import "style.css";
+	</style>
 </head>
-<body><style></style>
-	<p style="color:black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium omnis, ullam enim commodi quas delectus quo, excepturi inventore accusantium sapiente.</p>
-	<p style="color:skyblue">Quae odio nisi quisquam corrupti, repellat illo in tempora id, velit ducimus, modi magnam, dicta provident nulla cupiditate accusamus commodi!</p>
-	<p>Architecto illum vel a quibusdam, explicabo sapiente recusandae quos libero nesciunt, molestiae ea ipsum, commodi. Voluptate optio ducimus, illo quasi.</p>
-	<p style="color:magenta;font-size:10px">Inventore laborum maiores itaque, ea, sit cum eveniet! Odio harum, illum libero. Eveniet, fuga ea nam distinctio recusandae corrupti veniam.</p>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci earum ea unde illo praesentium dolore maiores, accusantium, veritatis, excepturi obcaecati aut! Recusandae a commodi, doloribus voluptatem dolor perferendis ut hic.</p>
+	<p>Totam enim dolorum, vel earum aliquid atque quas tempora eum eius dignissimos a impedit voluptates voluptatum aut velit eaque aperiam itaque recusandae, quidem dolor. Inventore commodi fuga voluptas, deleniti architecto.</p>
+	<p style="color: blue">Provident perspiciatis pariatur omnis optio facere debitis cumque ut ipsam excepturi doloribus, fugit laudantium fugiat quas veritatis nisi velit nesciunt repudiandae sit similique sed, nostrum accusamus ratione, molestiae beatae! Neque.</p>
+	<p style="color: skyblue;font-size: 30px">Repellendus dolorum inventore magnam excepturi quo, sed unde quia provident? Similique autem corporis impedit reiciendis placeat numquam provident, accusantium deleniti nihil pariatur in vel quae itaque dolor. Quasi odit, earum!</p>
+	
+<style>
+	/*ul{color: red}*/
+	#nav{color: white}
+	.menu{color: black}
 
+	/* 우선순위 * < tag name < class name < id name < inline style < !important*/
+</style>	
 	<!-- ul#nav>li.menu*5>{menu} -->
 	<ul id="nav">
-		<li class="menu" style="color:black">menu</li>
+		<li class="menu" style="color:red">menu</li>
 		<li class="menu">menu</li>
 		<li class="menu">menu</li>
 		<li class="menu">menu</li>
 		<li class="menu">menu</li>
 	</ul>
-	<!-- ul#kyun>li.menu -->
 
-	<!-- ul.nav1>li.menu1*5>{menu} -->
+<style>
+	#nav1 > li{color: red}
+	ul#nav1 > li{color: red}
+	ul#nav1 > li > a{color: red}
+	ul#nav1 a{color: blue}
+</style>
 
+	<!-- ul#nav1>li.menu1*5>{menu} -->
 	<ul id="nav1">
 		<li><a href="#"></a>test</li>
 		<li>menu</li>
@@ -44,7 +49,7 @@
 	</ul>
 
 	<header id="header">
-		<h1>Logo</h1>
+		<h1>logo</h1>
 		<nav id="nav">
 			<ul>
 				<li></li>
@@ -55,5 +60,6 @@
 			</ul>
 		</nav>
 	</header>
+	
 </body>
 </html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>call back</title>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+			$("button").click(function(){
+				$("p").hide("slow",function(){alert("버튼이눌러졌네요.")});
+			});
+		});
+	</script>
+</head>
+<body>
+	<button>hide</button>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, odio.</p>
+</body>
+</html>

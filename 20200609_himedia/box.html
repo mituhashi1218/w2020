@@ -5,15 +5,21 @@
 	<meta charset="UTF-8">
 	<title>문서 제목</title>
 	<style>
-		*{margin:0;padding:0}
-		a:link,a:visited{color:#000;text-decoration:none;}
-		li{list-style:none;}
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color: #000;text-decoration: none;}
+		li{list-style: none;}
+		body{background-image: url(../images/bg_grid.gif);}
+		div.box{
+			width: 200px;height:200px;
+			background-color: orange;
+			padding: 10px;
+			border: 10px solid #000; /* bd+*/
+			box-sizing: border-box;
 
-		body{background-image:url(../Images/bg_grid.gif);}
-		div.box{width: 180px;height: 180px;background-color:orange;margin:10px;/*border-color:#000;border-width:10px;border-style:solid;*/border:10px solid;box-sizing:border-box;}
+		}
 	</style>
 </head>
 <body>
-	<div class="box">text</div>
+	<div class="box">test</div>
 </body>
 </html>

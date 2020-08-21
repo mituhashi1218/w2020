@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<!-- <script>
+		$(function(){
+			// $("#wrapper li").eq(0).css("top",0).animate({top:"-100%"},1000);
+			// $("#wrapper li").eq(1).css("top","100%").animate({top:0},1000);
+
+			var current = 0;
+			var banner = $("#wrapper li");
+
+			function banMove(){
+
+				move(current,"0","-100%")
+				//banner.eq(current).css("left","0").animate({left:"-100%"},400);
+				current++;  //current = current + 1;
+				if(current == 3){current=0;}
+				move(current,"100%","0")
+				//banner.eq(current).css("left","100%").animate({left:0},400);
+
+			}
+			function move(i,start,end){
+				banner.eq(i).css("top",start).animate({top:end},400);
+			}
+			//banMove();
+			setInterval(banMove,2000);
+
+		});
+	</script> -->
+
+
+	<!-- 1.next btn 제작
+	2.slideNext 함수 제작
+	3.next button클릭시 증감연상자 작동여부
+	4.함수내에 current / i = current +1 제작
+	5.current banner dom 구하고 애니메이션 실행
+	6.next banner dom 구하고 애니메이션 실행
+	7.if(i==3) i=0; i값 제어
+	8.함수내의 i값을 current에 대입( current = i; ) -->
+
+	<script>
+$(function(){
+         var current = 0;
+         var banner = $("#wrapper li");
+         var pager = $(".pager span")
+         var i;
+         var overBtn = false;
+
+         function slideNext(){
+            // current++;
+            
+            if(overBtn == false){
+               overBtn = true;
+               i = current + 1; //다음배너값구하기 current 0 1 2 
+               if(i==3){
+                  i = 0;
+               }
+               slideView("next")
+            }
+             // console.log(current);
+         }
+         function slidePrev(){
+
+            if(overBtn == false){
+               overBtn = true;
+               i = current - 1;
+               if(i==-1){i=2;}
+               
+               slideView("prev");
+            }
+         }
+
+
+         $(".bt_next").click(function(){
+            slideNext();
+         });
+
+         $(".bt_prev").click(function(){
+            slidePrev();
+         });
+         function slideView(view){
+            var currentEl = banner.eq(current); //현재 배너
+               var nextEl = banner.eq(i); // 다음배너
+
+
+               pager.removeClass("active")
+               .eq(i)
+               .addClass("active");
+
+               if(view == "prev"){
+                  currentEl.css({left:0}).stop().animate({left:"100%"},1000,function(){overBtn=false;});
+                  nextEl.css({left:"-100%"}).stop().animate({left:0},1000);
+               }else{
+                  currentEl.css({left:0}).stop().animate({left:"-100%"},1000,function(){overBtn=false;});
+                  nextEl.css({left:"100%"}).stop().animate({left:0},1000);
+               }
+               current = i; //최종 현재값
+         }
+
+         function trigger(){
+            $(".bt_next").trigger("click");
+         }
+         setInterval(trigger,3000);//1000 = 1초
+
+         pager.click(function(){
+         i = $(this).index();
+         slideView("next");   
+         });
+
+         $("#wrapper").mousewheel(function(event){
+            console.log(event.deltaX, event.deltaY, event.deltaFactor);
+            if(event.deltaY<0){
+               $(".bt_next").trigger("click");
+            }
+            if(event.deltaY>0){
+               $(".bt_prev").trigger("click");
+            }
+         });
+      });
+
+	</script>
+	<style>
+		img{display: block;width: 500px;}
+		#wrapper{width: 500px;height: 250px;margin: 20px auto;background-color:skyblue;}
+		#wrapper ul{width: 500px;height: 208px;position: relative;overflow: hidden;}
+		#wrapper li{position: absolute;left:100%;}
+		#wrapper li:nth-child(1){left:0;}
+		#wrapper #btn span{cursor: pointer;}
+		#wrapper .pager span{width: 20px;display: inline-block;height: 20px;
+         background-color:#fff;border-radius:10px;cursor: pointer;
+         text-indent:-9999px;}
+
+	    #wrapper .pager span.active{background-color: #f00;}   
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<ul>
+			<li><img src="../images/pc01.jpg" alt=""></li>
+			<li><img src="../images/pc02.jpg" alt=""></li>
+			<li><img src="../images/pc03.jpg" alt=""></li>
+		</ul>
+		<div id="btn">
+			<span class="bt_prev">이전</span>
+			<span class="bt_next">다음</span>
+		</div>
+	     <div class="pager">
+	         <span class="active">1</span>
+	         <span>2</span>
+	         <span>3</span>
+      </div>
+   </div>
+	</div>
+</body>
+</html> 

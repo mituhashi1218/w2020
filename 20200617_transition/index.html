@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box{
+			width: 300px;margin: 0 auto;
+			position: relative;overflow:hidden;
+			cursor: pointer;  /*손가락나옴*/
+			display: none;
+			
+		}
+		.box .overlay{
+			width: 300px;height: 300px;
+			background-color: rgba(0,0,0,0.5);
+			position: absolute;top:0;
+			transition: 0.5s;opacity:0;
+		}
+		.box:hover .overlay{opacity: 1;}
+		.box .overlay .txt{
+			width: 120px;height: 120px;
+			line-height: 30;text-align: center;
+			background-color: white;
+			position: absolute;
+			left: 50%;margin-left: -60px;
+			top:50%;margin-top: -15%;
+			line-height: 120px;
+			border-radius: 60px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+		<div class="overlay">
+			<div class="txt">Lorem ipsum.</div>
+		</div>
+	</div>
+	<div class="view">
+		
+	</div>
+<style>
+	.container{
+		width: 1200px;margin: 0 auto;
+		padding: 50px 0;
+	}
+	.container h2{
+		text-align: center;
+		position: relative;
+		
+	}
+	.container h2:after{
+		content:"";display: block;
+		width: 10px;height: 10px;
+		background-color: red;
+		position: absolute;	top:-10px; /*빨간점위치*/
+		left: 50%;border-radius: 5px;
+		margin-left: -5px;
+	}
+	.container p{
+		text-align: center;
+		color: #666;
+		margin-bottom: 23px;
+	} 
+	.container .content li{
+		float: left;
+		/*1200-75=1125  1125/4=281.25*/
+		width:281.25px;
+		margin-right: 25px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	.container .content li:last-child{margin-right: 0;}
+	.container .content img{width: 100%;}
+	.container .content .overlay{
+		width: 281.25px;height: 281.25px;
+		background-color:rgba(0,0,0,0.3);
+		position: absolute; top: 0; /*display: none;*/opacity: 0;
+		transition:0.3s;
+		  
+	}
+	.container .content .overlay .txt{
+		width: 150px;height: 150px;text-align: center;
+		line-height: 150px; background-color: #000;color: white;
+		border-radius: 20px;position: absolute;
+		left: 50%;top: 50%;margin-left: -75px;margin-top: -75px;  /*txt박스가운데정렬*/
+	}
+	.container .content li:hover .overlay{/*display: block;*/opacity: 1;	}
+	.bgOne{background-color: #aaa;} 
+
+
+
+
+</style>
+	<div class="container">
+		<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit.</p>
+		<div class="content">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap bgOne">
+		<div class="container">
+			<h2>GALLERY</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit.</p>
+			<div class="content">
+				<ul class="clearfix">
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="overlay">
+							<div class="txt">Lorem ipsum.</div>
+						</div>
+					</li>
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="overlay">
+							<div class="txt">Lorem ipsum.</div>
+						</div>
+					</li>
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="overlay">
+							<div class="txt">Lorem ipsum.</div>
+						</div>
+					</li>
+					<li>
+						<img src="../images/testimg.jpg" alt="">
+						<div class="overlay">
+							<div class="txt">Lorem ipsum.</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit.</p>
+		<div class="content">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

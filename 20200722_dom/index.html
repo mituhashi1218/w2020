@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		function change(){
+			var span = document.getElementsByTagName("span");
+			for(var i=0;i<span.length;i++){
+				span[i].style.color = "blue";
+				span[i].style.fontSize = "1.2em";
+				span[i].style.fontWeight = "bold";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h3>
+		내가좋아하는과일
+		<button type="button" onclick="change()">누르세요</button>
+	</h3>
+	Lorem ipsum dolor sit <span>사과</span>, consectetur adipisicing elit. Rem accusantium quas, fugit nesciunt ratione totam eveniet saepe <span>복숭아</span>tempora vel velit iusto <span>바나나</span>earum. Placeat distinctio <span>딸기</span>assumenda est, enim ut nemo pariatur.
+</body>
+</html>

@@ -4,114 +4,145 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<title>pc layout</title>
-	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/reset.css">		
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- header#main_header>h1#logo>{logo}^nav#util.menu>ul.clearfix>li*4>a[#]>{menu$}^^^^nav#main_menu>ul.clearfix>li*5>a[#]>{MENU$} -->
-<header id="main_header">
-	<h1 id="logo">Lorem ipsum.</h1>
-	<nav id="util_menu">
-		<ul class="clearfix">
-			<li><a href="#">menu1</a></li>
-			<li><a href="#">menu2</a></li>
-			<li><a href="#">menu3</a></li>
-			<li><a href="#">menu4</a></li>
-		</ul>
-	</nav>
-	<nav id="main_menu">
-		<ul class="clearfix">
-			<li><a href="#">MENU1</a></li>
-			<li><a href="#">MENU2</a></li>
-			<li><a href="#">MENU3</a></li>
-			<li><a href="#">MENU4</a></li>
-			<li><a href="#">MENU5</a></li>
-		</ul>
-	</nav>
-</header>
-<div id="content" class="clearfix">
-	<section id="main_section">
-		<article class="main_article">
-			<h2>Lorem ipsum.</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum enim vel, dolor esse saepe, corporis beatae odio qui incidunt deserunt similique reiciendis aliquam. Libero dolore sit amet atque, voluptatem nihil.</p>
-		</article>
-		<article class="main_article">
-			<h2>Quasi, ipsum!</h2>
-			<p>Nulla deleniti id quidem, eaque recusandae molestias quia enim repudiandae? Dignissimos sunt qui vel, minus, voluptatem iste sit magni a inventore illo accusantium nesciunt. Quis laborum quam qui excepturi! Quisquam?</p>
-		</article>
-		<article class="main_article">
-			<h2>Dolores, eligendi?</h2>
-			<p>Fugiat ratione voluptates magni saepe sint officia similique vero dignissimos atque culpa, nam velit, reprehenderit libero a dolore ab cupiditate vel fuga obcaecati labore tempore. Totam minima eligendi tempora quod.</p>
-		</article>
-	</section>
-	<aside id="main_aside">
-		<input type="radio" name="tab" id="first" class="inp" checked>
-		<input type="radio" name="tab" id="second" class="inp" checked="checked">
-		<div class="buttons clearfix">
-			<label for="first">first</label>
-			<label for="second">second</label>
-		</div>
-		<div class="tab_items1">
-			<ul>
-				<li class="item clearfix">
-					<div class="thumbnail"><img src="http://via.placeholder.com/45" alt=""></div>
-					<div class="des">
-						<strong>1Lorem ipsum dolor sit.</strong><p>2020.07.01</p>
-					</div>
-				</li>
-				<li class="item clearfix">
-					<div class="thumbnail"><img src="http://via.placeholder.com/45" alt=""></div>
-					<div class="des">
-						<strong>1Lorem ipsum dolor sit.</strong><p>2020.07.01</p>
-					</div>
-				</li>
-				<li class="item clearfix">
-					<div class="thumbnail"><img src="http://via.placeholder.com/45" alt=""></div>
-					<div class="des">
-						<strong>1Lorem ipsum dolor sit.</strong><p>2020.07.01</p>
-					</div>
-				</li>
-				<li class="item clearfix">
-					<div class="thumbnail"><img src="http://via.placeholder.com/45" alt=""></div>
-					<div class="des">
-						<strong>1Lorem ipsum dolor sit.</strong><p>2020.07.01</p>
-					</div>
-				</li>
+	
+	<!-- header#main_header>h1#logo>{logo}^nav#util_menu>ul.clearfix>li*4>a[#]>{menu$}^^^^nav#main_menu>ul.clearfix>li*4>a[#]>{menu$}
+	header#main_header>(h1#logo>{logo})+(nav#util_menu>ul.clearfix>li*4>a[#]>{menu$})+(nav#main_menu>ul.clearfix>li*4>a[#]>{menu$}) -->
+
+	<header id="main_header">		
+		<h1 id="logo">logo</h1>
+		<nav id="util_menu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
 			</ul>
-		</div>
-		<div class="tab_items2">			
-			<ul>
-				<li class="item clearfix">
-					<div class="thumbnail"><img src="http://via.placeholder.com/45" alt=""></div>
-					<div class="des">
-						<strong>2Lorem ipsum.</strong><p>2020.07.01</p>
-					</div>
-				</li>
-				<li class="item clearfix">
-					<div class="thumbnail"><img src="http://via.placeholder.com/45" alt=""></div>
-					<div class="des">
-						<strong>2Lorem ipsum.</strong><p>2020.07.01</p>
-					</div>
-				</li>
-				<li class="item clearfix">
-					<div class="thumbnail"><img src="http://via.placeholder.com/45" alt=""></div>
-					<div class="des">
-						<strong>2Lorem ipsum.</strong><p>2020.07.01</p>
-					</div>
-				</li>
-				<li class="item clearfix">
-					<div class="thumbnail"><img src="http://via.placeholder.com/45" alt=""></div>
-					<div class="des">
-						<strong>2Lorem ipsum.</strong><p>2020.07.01</p>
-					</div>
-				</li>
+		</nav>
+		<nav id="main_menu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
 			</ul>
-		</div>
-	</aside>
-</div>
-<footer id="main_footer">
-	<h3>Lorem ipsum.</h3>
-	<address>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, dolores?</address>
-</footer>
+		</nav>
+	</header>
+	<div id="content" class="clearfix">
+		<section id="main_section">	
+			<article class="main_article">
+				<h2>Lorem ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quaerat aperiam quibusdam suscipit accusantium, dolores architecto numquam, ducimus sed. Quod a quia veritatis ipsum alias tempore facilis, sunt rem exercitationem!</p>
+			</article>
+			<article class="main_article">
+				<h2>Eius, dolore.</h2>
+				<p>Nemo optio illum nisi nulla esse, adipisci dolor, voluptatum suscipit ipsa quibusdam. Aperiam, optio! Praesentium, molestiae, quia quaerat illo accusamus, quo nesciunt dolor, quam saepe voluptatum cupiditate eveniet nam ut.</p>
+			</article>
+			<article class="main_article">
+				<h2>Neque, iusto.</h2>
+				<p>Asperiores similique aperiam nihil illo odio consequuntur libero! Earum dolorum, culpa animi nulla fuga delectus id, voluptatum pariatur, qui ab explicabo officiis est hic suscipit at aliquid rerum maxime corporis!</p>
+			</article>
+		</section>
+		<aside id="main_aside">
+			<input type="radio" name="tab" id="first" class="inp" checked="chedked">
+			<input type="radio" name="tab" id="second" class="inp">
+			<div class="buttons clearfix">
+				<label for="first">first</label>
+				<label for="second">second</label>
+			</div>
+			<div class="tab_items1">
+				<ul>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>1Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>1Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>1Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>1Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					
+
+				</ul>
+			</div>
+			<div class="tab_items2">
+				<ul>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>2Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>2Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>2Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					<li class="item clearfix">
+						<div class="thumbnail">
+							<img src="http://via.placeholder.com/45" alt="">
+						</div>
+						<div class="des">
+							<strong>2Lorem ipsum.</strong>
+							<p>2020.07.01</p>
+						</div>
+					</li>
+					
+
+				</ul>
+			</div>
+		</aside>
+	</div>
+	<footer id="main_footer">
+		<h3>Lorem ipsum.</h3>
+		<address>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, possimus.</address>
+	</footer>
 </body>
 </html>

@@ -4,37 +4,85 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
 	<title>animation</title>
-	<link rel="stylesheet" href="../bxslider/css/reset.css">
+	<link rel="stylesheet" href="../css/reset.css">
 	<style>
+		.box{
+			width: 100px;height: 100px;
+			background-color: #f00 ;
+			_animation-name:ani; /*이름*/
+			animation-duration:1s; /*애니메이션작동시간*/
+			animation-fill-mode:forwards; /*종료시점*/
+			animation-iteration-count: infinite;   /*움직임반복 횟수*/
+			animation-direction:alternate; /*왔다갔다움직임*/
+			_animation-delay: 1s; /*지연시간*/
+			animation-timing-function: ease; /*속도시간일정*/
+			_position:absolute;
+			
+		}
+		@keyframes ani{
+			/*from{width: 100px;}*/  /*box 시작*/
+			/*to{width: 200px;} */ /*box 끝*/
+			0%{width: 100px; background-color: #f00; height: 100px;}
+			50%{width: 300px;background-color: #0f0;height: 50px}
+			100%{width: 500px;background-color: #0000ff;height: 10px;}
+		}
+		.boxWrap{
+			width: 300px;height: 300px;
+			background-color: skyblue;
+			position: relative;
+		}
+		.line{
+			width:0;height: 10px;   
+			background-color: #00f;
+			_animation-name:lineAni;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		} 
+		/*wh bgc 애니이름 키프래임 프롬투 시간이있어야작동! animation-durotion*/
+		@keyframes lineAni{
+			from{width: 0;}
+			to{width: 100%;}
+		}
+		.line1{width: 10px;height: 0;
+			background-color: #00f;
+			position: absolute;top:0;
+			_animation-name:lineAniOne;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+		@keyframes lineAniOne{
+			from{height: 0;}
+			to{height: 100%;}
+		}
+		.line2{
+			width: 10px;height:0px;
+			position: absolute;
+			right: 0;bottom:0;
+			background-color: #00f;
+			animation-duration:1s;
+			animation-fill-mode:forwards;
+		}
+		@keyframes lineAniII{
+			from{height: 0;}
+			to{height: 100%;}
+		}
+		.line3{
+			width: 0px;height: 10px;
+			background-color: #00f;
+			position: absolute;
+			right: 0;bottom:0;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+		@keyframes lineAniIII{
+			from{width: 0;}
+			to{width: 100%;}
+		}
 
-		.box{width: 100px;height: 100px;background-color:#f00;
-			animation-name:ani;/*name*/
-			_animation-duration: 1s;/*애니 작동시간*/
-			_animation-fill-mode:forwards;/*종료시점*/
-			_animation-iteration-count:infinite;/*반복*/
-			animation-direction:alternate;/*번갈아서 나오기*/
-			animation-delay:1s;/*지연시간*/
-			animation-timing-function:linear;}
-		@keyframes ani{/*from{width: 100px;}to{width: 200px;}*/
-		0%{width: 100px;background-color:#f00;height: 100px;left: 0;}
-		50%{width: 300px;background-color:#0f0;height: 50px;left: 200px;}
-		100%{width: 500px;background-color: #00f;height: 10px;left: 300px;}
-	}
-
-		.boxWrap{width: 300px;height: 300px;background-color:rgba(50,170,0,1);position: relative;}
-		.line{width:0;height: 5px;background-color:gray;_animation-name:lineAni;animation-duration:1s;animation-fill-mode:forwards;}
-		@keyframes lineAni{from{width: 0;}to{width: 100%;}}
-		.line1{width: 5px;height: 0;background-color:gray;position: absolute;top: 0;_animation-name:lineAniOne;animation-duration:1s;animation-fill-mode:forwards}
-		@keyframes lineAniOne{from{height: 0;}to{height: 100%;}}
-		.line2{width: 0;height: 5px;background-color:gray;_animation-name:lineAniTwo;animation-duration:1s;position: absolute;bottom: 0;right: 0;animation-fill-mode:forwards;}
-		@keyframes lineAniTwo{from{width: 0;}to{width:100%;}}
-		.line3{width: 5px;height: 0px;background-color:gray;_animation-name:lineAniThree;animation-duration:1s;position: absolute;right: 0;bottom: 0;animation-fill-mode:forwards;}
-		@keyframes lineAniThree{from{height: 0;}to{height: 100%;}}
 		.boxWrap:hover .line{animation-name:lineAni;}
 		.boxWrap:hover .line1{animation-name:lineAniOne;}
-		.boxWrap:hover .line2{animation-name:lineAniTwo;}
-		.boxWrap:hover .line3{animation-name:lineAniThree;}
-
+		.boxWrap:hover .line2{animation-name:lineAniII;}
+		.boxWrap:hover .line3{animation-name:lineAniIII;}
 
 	</style>
 </head>

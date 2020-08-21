@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <meta charset="UTF-8">
+   <title>문서 제목</title>
+   <link rel="stylesheet" href="css/reset.css">
+   <script src="js/jquery-3.1.1.min.js"></script>
+   <script src="js/jquery.mouseWheel.js"></script>
+   <script>
+
+      // next btn 순서
+      // 1. next btn 버튼제작
+      // 2. slideNext 함수제작
+      // 3. next button 클릭 시 증감연사자 작동여부
+      // 4. 함수내에 current / i = current + 1 제작
+      // 5. current banner dom을 구하고 애니메이션 실행
+      // 6. next banner dom을 구하고 애니메이션 실행
+      // 7. if(i==3) i=0; i값 제어
+      // 8. 함수 내의 i값을 current에 대입 (current = i;)
+
+      
+      //overBtn은 버튼을 연속 눌렀을 때에 겹쳐서 이상하게 나오는 오류를 정상적으로 하나씩 나오게 함
+
+
+      $(function(){
+         var current = 0;
+         var banner = $("#wrapper li");
+         var pager = $(".pager span")
+         var i;
+         var overBtn = false;
+
+         function slideNext(){
+            // current++;
+            
+            if(overBtn == false){
+               overBtn = true;
+               i = current + 1; //다음배너값구하기 current 0 1 2 
+               if(i==3){
+                  i = 0;
+               }
+               slideView("next")
+            }
+             // console.log(current);
+         }
+         function slidePrev(){
+
+            if(overBtn == false){
+               overBtn = true;
+               i = current - 1;
+               if(i==-1){i=2;}
+               
+               slideView("prev");
+            }
+         }
+
+
+         $(".bt_next").click(function(){
+            slideNext();
+         });
+
+         $(".bt_prev").click(function(){
+            slidePrev();
+         });
+         function slideView(view){
+            var currentEl = banner.eq(current); //현재 배너
+               var nextEl = banner.eq(i); // 다음배너
+
+
+               pager.removeClass("active")
+               .eq(i)
+               .addClass("active");
+
+               if(view == "prev"){
+                  currentEl.css({left:0}).stop().animate({left:"100%"},1000,function(){overBtn=false;});
+                  nextEl.css({left:"-100%"}).stop().animate({left:0},1000);
+               }else{
+                  currentEl.css({left:0}).stop().animate({left:"-100%"},1000,function(){overBtn=false;});
+                  nextEl.css({left:"100%"}).stop().animate({left:0},1000);
+               }
+               current = i; //최종 현재값
+         }
+
+         function trigger(){
+            $(".bt_next").trigger("click");
+         }
+         setInterval(trigger,3000);//1000 = 1초
+
+         pager.click(function(){
+         i = $(this).index();
+         slideView("next");   
+         });
+
+         $("#wrapper").mousewheel(function(event){
+            console.log(event.deltaX, event.deltaY, event.deltaFactor);
+            if(event.deltaY<0){
+               $(".bt_next").trigger("click");
+            }
+            if(event.deltaY>0){
+               $(".bt_prev").trigger("click");
+            }
+         });
+      });
+   </script>
+   <style>
+      img{display: block;width: 500px;}
+      #wrapper{width: 500px;height: 258px;margin: 20px auto;background-color:skyblue;}
+      #wrapper ul{width: 500px;height: 208px;position: relative;overflow: hidden;}
+      #wrapper li{position: absolute;left:100%;}
+      #wrapper li:nth-child(1){left:0;}
+      .bt_prev{cursor:pointer;}
+      .bt_next{cursor: pointer;}
+
+
+      /*//20200814 pager추가*/
+      #wrapper .pager span{width: 20px;display: inline-block;height: 20px;
+         background-color:#fff;border-radius:10px;cursor: pointer;
+         text-indent:-9999px;}
+
+      #wrapper .pager span.active{background-color: #f00;}   
+   </style>
+</head>
+<body>
+   <div id="wrapper">
+      <ul>
+         <li><img src="../images/pc01.jpg" alt=""></li>
+         <li><img src="../images/pc02.jpg" alt=""></li>
+         <li><img src="../images/pc03.jpg" alt=""></li>
+      </ul>
+      <div class="btn">
+         <span class="bt_prev">이전</span>
+         <span class="bt_next">다음</span>
+      </div>
+      <div class="pager">
+         <span class="active">1</span>
+         <span>2</span>
+         <span>3</span>
+      </div>
+   </div>
+</body>
+</html>

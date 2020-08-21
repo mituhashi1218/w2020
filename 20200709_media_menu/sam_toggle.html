@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>media</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/style1.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".toggleMenu").click(function(){
+				//console.log($(this).attr("class"));
+
+				var toggle = $(this).attr("class")
+				if(toggle == "toggleMenu"){
+					$(this).addClass("change");
+					$("#myTopMenu").stop().animate({left:0},300);
+				}else{
+					$(this).removeClass("change");
+					$("#myTopMenu").stop().animate({left:"-100%"},300);
+				}
+
+				// var menu = $(".menu").attr("class");
+				// if(menu == "menu"){
+				// 	$(".menu").addClass("top"); //class menu에 top추가
+				// }else{
+				// 	$(".menu").removeClass("top");
+				// }
+
+			});
+		});
+	</script>
+
+	<style>
+		div.toggleMenu{
+			width: 50px;height: 50px;
+			border: 1px solid #ccc;
+			position: absolute;cursor:pointer; right:0;
+			z-index:1;top:0;
+		}
+		div.toggleMenu div{
+			width: 34px;height: 5px;background-color: #fff;
+			border-radius:3px;position: absolute;left:7px;
+			transition:0.3s;
+		}
+		.bar1{top:11px;}
+		.bar2{top:21px;}
+		.bar3{top:31px;}
+		.change .bar1{left:50%;top:50%;transform:translate(-50%,-50%) rotate(-45deg);}
+		.change .bar2{opacity:0;}
+		.change .bar3{left:50%;top:50%;transform:translate(-50%,-50%) rotate(45deg);}
+
+
+
+		
+	</style>
+</head>
+<body>
+	<div class="menuWrap">
+		<h1>logo</h1>
+		<div id="myTopMenu">
+			<nav  class="topNav clearfix noFloat">
+				<a href="#">HOME</a>
+				<a href="#"><i class="fas fa-headphones"></i> NEWS</a>
+				<a href="#"><i class="fas fa-home"></i> CONTACT</a>
+				<a href="#"><i class="fas fa-umbrella"></i> PRODUCT</a>
+			</nav>
+		</div>
+		<div class="toggleMenu">
+			<!-- div.bar$*3 -->
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+	</div>
+	<div class="content">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ab magni nihil non voluptas distinctio, voluptatum totam, sequi, provident ducimus minima vel obcaecati quo deserunt iste ex repellendus, atque quam repudiandae cupiditate velit! Repudiandae provident quasi labore ipsa, amet tempora expedita eius ratione pariatur maiores maxime suscipit, veniam id ea quam sunt. Perferendis reiciendis perspiciatis quae et ipsam quo, nemo rerum nulla, eos ipsum amet dolorum, facilis laudantium mollitia iure, veniam quas! Ad, laborum vel possimus nostrum recusandae modi dolore soluta eaque deserunt aperiam nemo optio tempore, nihil cumque, explicabo blanditiis iure est molestiae voluptatibus vero architecto nisi dolorum veniam voluptatem deleniti. Hic dolore obcaecati numquam error voluptates placeat id, aperiam distinctio nemo ad, suscipit tenetur expedita voluptatem iste qui? Nostrum modi aspernatur voluptates reprehenderit expedita recusandae atque dignissimos soluta fuga quidem, obcaecati nisi impedit, iusto quisquam voluptatem quis consectetur cumque assumenda quas eligendi ea possimus! Nisi deserunt autem reprehenderit nostrum perferendis consequatur a veniam odit quia, exercitationem minus, rem sunt nobis quidem. Neque in sapiente, id voluptatibus illum sit, voluptatum atque dolores iste nostrum illo necessitatibus laborum excepturi, consectetur at ipsa minus sunt unde enim repellendus tenetur. Modi autem eaque a voluptatum velit! In, maiores debitis culpa ad ipsa sapiente magni dignissimos optio natus, labore. Perspiciatis quasi incidunt impedit recusandae expedita perferendis eveniet molestiae. Distinctio aut vel culpa totam, qui hic quam sequi autem quae illum quia sunt vero, fugit officiis iusto non, necessitatibus sapiente quos suscipit. Accusantium, necessitatibus, odio. Error unde consequuntur, sed eaque quia est eligendi deleniti earum ea ipsum fugit eos dolores voluptatem velit illo rerum porro possimus quasi aliquid ad, sequi ipsa, officia animi! Hic architecto totam doloremque repudiandae facilis, illum porro inventore voluptas earum laudantium aliquam, quis ipsa autem eum in quam sapiente quos eius dolorum doloribus facere placeat. Voluptatum eius aliquid labore ipsam?
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas a soluta dicta quibusdam, saepe accusamus provident distinctio dolores tenetur, possimus repellendus maxime laudantium cumque omnis aperiam iusto alias eligendi. Animi, temporibus, perferendis. Sed repellat molestias aspernatur deleniti facere doloremque sapiente laborum adipisci, illo voluptates temporibus eius esse doloribus mollitia dolores sit debitis aliquam iste quisquam consequatur impedit ab enim totam nobis. Maxime accusantium dolores at, nisi quod asperiores obcaecati minima dolore aspernatur eveniet repellat incidunt est ut ad veniam, ab impedit, harum atque distinctio dolorum animi, error quam. Aperiam asperiores, officia sit. Expedita et, quae quibusdam accusamus. Qui reiciendis fugit esse repudiandae sint nesciunt voluptate laudantium quo dolorum odit, quos aliquid ipsa non nihil accusamus assumenda, tempore voluptatibus nostrum asperiores iusto. Quod mollitia dolorem, quis exercitationem quidem, labore odit veritatis dolorum quae, voluptates atque animi quisquam nemo corporis. Iusto quo, eum provident necessitatibus excepturi tempore nihil nostrum molestiae? Porro eos et itaque voluptas quos natus, aliquam saepe, deserunt, voluptates minima ipsa repellat debitis. Perferendis magni facere possimus, nemo adipisci. Optio cum nobis ullam accusantium perferendis, dolorem at quas iusto libero nam quo quae officiis, itaque, tempora molestiae facilis eaque sequi beatae omnis mollitia placeat alias ipsum quibusdam qui. Illum minus ipsam natus harum nemo tempora, error assumenda magnam accusamus minima repellendus, pariatur repellat officiis iusto tempore nostrum ad veritatis praesentium inventore quisquam culpa? Reiciendis earum perspiciatis illo eveniet, corrupti ducimus dignissimos! Dolor asperiores dicta doloremque quam nihil neque, sint soluta accusamus placeat facere unde delectus cumque quod ex, corrupti velit repudiandae non illo aspernatur deleniti sunt? Quia animi, debitis distinctio facilis ab numquam! Id dolor vero rem deserunt iste, ea ex ad obcaecati recusandae facilis corrupti, cupiditate non nihil eius sequi ducimus, expedita delectus iusto ipsum assumenda, voluptatum molestias debitis. Quis id, necessitatibus placeat odit dolor magnam fugit modi laudantium molestias quod impedit ea accusantium nisi, ullam optio minus mollitia assumenda sunt laboriosam dolore dolores pariatur iste! Praesentium vitae veritatis repellendus! Rem impedit maxime sequi sunt quia molestiae perspiciatis ducimus dolores! Inventore minima laboriosam ex atque voluptates incidunt, tempore earum nobis natus est, quas suscipit aliquid quod? Voluptatibus autem aperiam voluptate quam cum adipisci, temporibus mollitia accusamus quasi ut porro quas. Adipisci eaque quisquam, quibusdam modi, consectetur, provident aliquam labore culpa aperiam explicabo ad fuga doloremque asperiores possimus totam. Quidem saepe voluptatibus tenetur eos id mollitia, sint et sit repellendus asperiores distinctio rem repellat, ut molestiae sed. Perferendis, minima, corrupti illum soluta vitae a labore esse. Quisquam odit ullam numquam sint, accusamus hic natus iure accusantium animi architecto vel quibusdam adipisci facilis atque pariatur in voluptatibus totam voluptate asperiores at labore deserunt quas repellendus quasi libero. Hic reiciendis laboriosam ipsam illum tenetur aut animi aliquid laborum voluptatum iste ad dolor nihil, quibusdam quidem labore quaerat dignissimos. Tempora aperiam dolorum, natus vero officiis facilis odio ducimus aliquam, aspernatur culpa ipsum officia! Non, iure itaque ratione deleniti cum quasi sint tempora impedit doloribus, totam excepturi aperiam aut recusandae molestiae animi, voluptas laborum! Soluta esse tempora laudantium possimus animi rerum illum et facilis?
+	</div>
+</body>
+</html>

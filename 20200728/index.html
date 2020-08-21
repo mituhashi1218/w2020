@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script>
+        $(document).ready(function(){
+            // $("p").hide();
+            // $("p").eq(0).hide();
+            var plen = $("p").length;
+            console.log(plen);
+            for(var i=0;i<plen;i++){
+                // $("p").eq(i).hide();
+                $("p").eq(1).css("background","red").css("font-size",30);
+            }
+
+            // $(선택자).on("click",function(){});
+            // $(선택자).click(function(){};)
+
+            // dom.addEventListener("click",function(){});
+            // $(".Btn_hide").click(function(){
+            //     $("p").hide();
+            // });
+            // $(".Btn_show").click(function(){
+            //     $("p").show();
+            // });
+            // $(".Btn_hide").click(function(){
+            //     $("p").fadeOut();
+            // });
+            // $(".Btn_show").click(function(){
+            //     $("p").fadeIn();
+            // });
+            $(".Btn_hide").click(function(){
+                $("p").slideUp();
+            });
+            $(".Btn_show").click(function(){
+                $("p").slideDown();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+    <button type="button" class="Btn_show">button1</button>
+    <button type="button" class="Btn_hide">button2</button>
+
+    <!-- <script>
+        var tagP = document.getElementsByTagName("p");
+        for(var i=0;i<tagP.lenth;i++){
+            tagP[i].style.display = "none"
+        }
+
+    </script> -->
+
+    <style>
+        ul>li {float: left; width: 100px; background-color: skyblue; margin-right: 10px; text-align: center; line-height: 40px;}
+        .box1,.box2,.box3 {width: 300px; padding: 20px; border: 1px solid #000;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".box2,.box3").hide();
+            $("ul>li").eq(0).click(function(){
+                $(".box1").show();
+                $(".box2").hide();
+                $(".box3").hide();
+            })
+
+            $("ul>li").eq(1).click(function(){
+                $(".box1").hide();
+                $(".box2").show();
+                $(".box3").hide();
+            })
+            
+            $("ul>li").eq(2).click(function(){
+                $(".box1").hide();
+                $(".box2").hide();
+                $(".box3").show();
+            })
+        })
+    </script>
+
+    <ul class="clearfix">
+        <li>menu1</li> <!-- $("ul>li").eq(0).click(function(){}); -->
+        <li>menu2</li> <!-- $("ul>li").eq(1).click(function(){}); -->
+        <li>menu3</li> <!-- $("ul>li").eq(2).click(function(){}); -->
+    </ul>
+    <div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, reprehenderit. </div>
+    <div class="box2">2. Esse reiciendis beatae temporibus velit unde itaque magni fugiat incidunt? </div>
+    <div class="box3">3. Harum earum et placeat molestias adipisci dolore praesentium pariatur id! </div>
+
+</body>
+</html>

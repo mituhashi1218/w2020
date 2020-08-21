@@ -6,29 +6,14 @@
 	<title>문서 제목</title>
 </head>
 <body>
-	<script>
-		var a = 100;
-		if(a==100){ 
-			document.write("100입니다.")
-		}
+<button type="button" onclick="alerBtn()">경고</button>
+   <script>
+      function alerBtn(){
+         var text = "안녕하세요\n";
+         text += "만나서 반갑습니다\n";
+         text += "저는 강민우 입니다"
+         alert(text);
+      }
 
-		function han(){
-			alert("다음에 오세요...");
-			// document.write("다음에 오세요.")
-			location.href="http://www.naver.com";
-		}
-		function han1(){
-			alert("구글로 이동해요");
-			// document.write("다음에 오세요.")
-			location.href="http://www.google.com";
-		}
-		han();
-
-		//function(){}; //익명함수
-		//function han(){}; //함수
-	</script>
-
-<!-- 	<a href="#" onclick="han();">클릭하시오.</a>
-	<a href="#" onclick="han1();">클릭하시오.</a> -->
-</body>
+   </script>   
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom2</title>
+</head>
+<body>
+	<span class="text">문자</span>,  <span class="text">문자2</span> 
+	<div onclick="change()">버튼1</div>
+	<div onclick="cChange()">버튼2</div>
+	<script>
+
+		function change(){
+			var span = document.getElementsByTagName("span");
+			console.log(span.length);
+			//span[0].style.color = "red";
+			for(var i=0;i<span.length;i++){
+				alert("창")
+				span[i].style.color="red";
+				span[i].style.background = "gray";
+			}
+		}
+		function cChange(){
+			var span = document.getElementsByClassName("text");
+			for(var i=0;i<span.length;i++){
+				span[i].style.color="black";
+			}
+		}
+		//change();
+	</script>
+</body>
+</html> 

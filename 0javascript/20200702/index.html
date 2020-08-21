@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>script</title>
+</head>
+<body>
+	<script>
+		var eng =70;
+		var math = 80;
+		var result;
+
+		// if(조건문){실행문}
+		// ==값이 같은지 !=값이 다른지 !==값 또는 타입이 다른지  ===  타입과 숫자값이 같아야 출력가능 
+		// || 논리합  참은1 거짓은 0   !논리부정  &&논리곱
+
+		if(eng != 80){
+			document.write("당신은 점수"+eng+ "점입니다.")
+		}
+
+		result = (eng > math)? eng : math;
+		document.write(result);
+	</script>
+	<script>
+		var man = "w";
+		var age = 21;
+		var result;
+
+		if(man =="m"){
+			alert("남자")
+			if(age>=19){
+				result="남자성인";
+			}else{
+				result="남자미성년자";
+			}
+		}else{
+			alert("여자");
+			if(age>=19){
+				result="여자성인";
+			}else{
+				result="여자미성년자";
+			}
+		}
+
+		document.write(result);
+
+
+	</script>
+</body>
+</html>

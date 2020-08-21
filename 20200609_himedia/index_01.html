@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>HIMEDIA01</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;box-sizing: border-box}
+		a:link,a:visited{color: #000;text-decoration: none;}
+		li{list-style: none;}
+
+		/*header*/
+		div.hdTop{
+			width: 980px;height: 75px;
+			margin: 0 auto;
+		}
+		div.hdTop>h1.logo{
+			text-align: center;
+			line-height: 75px;
+		}
+		nav.gnbMenu{background-color:#1d5da4;}
+		nav.gnbMenu>ul{width: 980px;margin: 0 auto;}
+		nav.gnbMenu>ul:after{content: "";clear: both;display: block;}
+		nav.gnbMenu>ul>li{
+			float: left;width:16.6666%;
+			border-right: 1px solid #336dac;
+		}
+		nav.gnbMenu/ul>li::first-child {border-left: 1px solid #336dac;
+		
+		}
+		
+		nav.gnbMenu>ul>li>a{
+			color:white;display: block;text-align: center;
+			height: 45px;line-height: 45px;
+		}
+		nav.gnbMenu>ul>li:hover{background-color: #233e6f;font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="hdTop">
+		<h1 class="logo"><a href="#">HIMEDIA</a></h1>
+	</div>
+	
+	<nav class="gnbMenu"> <!-- 980px -->
+		<ul>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">제품소개</a></li>
+				<li><a href="#">사업영역</a></li>
+				<li><a href="#">고객센터</a></li>
+				<li><a href="#">사회공헌</a></li>
+				<li><a href="#">인재채용</a></li>
+		</ul>
+	</nav>
+	
+</body>
+</html>

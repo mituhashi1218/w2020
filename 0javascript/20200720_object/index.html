@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>	
+</head>
+<body>
+	<script>
+		var kdata=["서울","부산","청주","대구"];
+
+		kdata.forEach(printArr);
+		function printArr(item,index){
+			document.write(index+1 +". "+item+"<br>");
+		}
+
+		function printArrOne(){
+			for(var i=0;i<kdata.length;i++){
+				var num = i+1;
+				document.write(num +". "+kdata[i]+"<br>");
+			}
+		}
+		printArrOne();
+
+
+		var data=[10,20,30,40,30,60,70,30,90,100];
+		document.write(data+"<br>");
+		document.write(data.indexOf(30)+"<br>");
+		document.write(data.lastIndexOf(30)+"<br>");
+		document.write(data.indexOf(30,3)+"<br>");  //30 을  0123 후에나오는 데이타찾기
+		document.write(data.indexOf(300));  //-1로 출력 =데이타가 없다는뜻 
+	</script>
+</body>
+</html>

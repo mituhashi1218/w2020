@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<!-- script:src -->
+	<script src="js/jquery.bxslider.js"></script>
+	<style>
+		.slick img{width:100%;}
+	</style>
+</head>
+<body>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="slick/slick.min.js"></script>
+	<div class="visual">
+		<ul class="center">
+			<li><img src="images/pc01.jpg" alt="이미지1"></li>
+			<li><img src="images/pc02.jpg" alt="이미지2"></li>
+			<li><img src="images/pc03.jpg" alt="이미지3"></li>
+			<li><img src="images/pc03.jpg" alt="이미지3"></li>
+			<li><img src="images/pc03.jpg" alt="이미지3"></li>
+			<li><img src="images/pc03.jpg" alt="이미지3"></li>
+		</ul>
+	</div>
+	<script>
+	$(document).ready(function(){
+		$('.center').slick({
+			prevArrow: $('.slick-prev'),
+		  nextArrow: $('.slick-next')
+		  centerMode: true,
+		  centerPadding: '60px',
+		  slidesToShow: 3,
+		  responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        arrows: false,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        slidesToShow: 3
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        arrows: false,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        slidesToShow: 1
+		      }
+		    }
+		  ]
+		});
+	});
+	</script>
+</body>
+</html>

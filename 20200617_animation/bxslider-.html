@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>슬라이더예제</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<style>
+		header#header{
+			width: 1100px;height: 50px;margin: 0 auto;
+			background-color: skyblue;padding-top: 10px;
+		}
+		.box{width: 100px;height: 10px;background-color: red;
+		}  /*첫번째에서 마진톱0오토 쓰면 안됨*/
+		.box1{width: 100px;height: 10px;background-color: blue;
+			margin-top: 10px;
+		}
+		.visual{}
+		.visual .view{width: 1100px;position: relative;height: 700px;margin: 0 auto;		}
+		.visual .slider li{overflow: hidden;}
+		.visual .slider img.img{position: absolute;left: 50%;		}
+		.visual .visualTxt{position: absolute;top: 150px;width: 500px;		}
+		.visual .visualTxt h3{font-size: 2.5em;margin-bottom: 20px;}
+		.visual .visualTxt p{margin-bottom: 20px;}
+		.visual .visualTxt a{
+			display: block;width: 200px;height: 60px;
+			background-color: #f00;	color:white;
+			border-radius:30px;  /*높이의절반*/
+			text-align: center;
+			line-height: 60px;
+		}
+
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({});
+
+	</script>
+</head>
+<body>
+	<header id="header">
+		<div class="box"></div>
+		<div class="box1"></div>
+	</header>
+	<div class="visual">
+		<ul class="slider">
+			<li>  <!-- w100% -->
+				<div class="view">  <!-- w1100 -->
+					<img src="../02chavy/images/cha_img_01.jpg" alt="" class="img">
+					<div class="visualTxt">
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, vitae.Lorem ipsum dolor sit amet, </p>
+						<a href="#" class="btnA">Request</a>
+					</div>
+				</div>
+			</li>
+
+			<li>  <!-- w100% -->
+				<div class="view">  <!-- w1100 -->
+					<img src="../02chavy/images/cha_img_01.jpg" alt="" class="img">
+					<div class="visualTxt">
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, vitae.Lorem ipsum dolor sit amet,</p>
+						<a href="#" class="btnA">Request</a>
+					</div>
+				</div>
+			</li>
+			<li>  <!-- w100% -->
+				<div class="view">  <!-- w1100 -->
+					<img src="../02chavy/images/cha_img_01.jpg" alt="" class="img">
+					<div class="visualTxt">
+						<h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, vitae.Lorem ipsum dolor sit amet, </p>
+						<a href="#" class="btnA">Request</a>
+					</div>
+				</div>
+			</li>
+
+	</div>
+</body>
+</html>

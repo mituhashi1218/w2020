@@ -5,92 +5,154 @@
 	<meta charset="UTF-8">
 	<title>HIMEDIA</title>
 	<link rel="stylesheet" href="css/style.css">
-</head>
+	
 <body>
-<header id="header">
-	<div class="utilWrap">
-		<div class="util">
-			<ul class="utilMenu clearfix">
-				<li><a href="#">Login</a></li>
-				<li><a href="#">Join</a></li>
-				<li><a href="#">Contact us</a></li>
-				<li><a href="#">English</a></li>
-			</ul>
+	<header id="header">
+		<div class="utilWrap">
+			<div class="util">
+				<ul class="utilMenu clearfix">
+					<li><a href="#">Login</a></li>
+					<li><a href="#">Join</a></li>
+					<li><a href="#">Contact us</a></li>
+					<li><a href="#">English</a></li>
+				</ul>
+			</div>
 		</div>
-	</div>
-	<div class="headerTop">
-		<h1 class="logo"><a href="#">HIMEDIA</a></h1>
-		<div class="toggle">
-			<div class="box1"></div>
-			<div class="box2"></div>
-			<div class="box3"></div>
+		
+		<div class="hdTop">
+			<h1 class="logo"><a href="#">HIMEDIA</a></h1>
+			<div class="toggle">  <!-- 햄버거박스 -->
+				<div class="box1"></div>
+				<div class="box2"></div>
+				<div class="box3"></div>
+			</div>
 		</div>
-</header>
-
-		<nav class="gnbMenu">
-		<ul>
-			<li><a href="#">회사소개</a></li>
-			<li><a href="#">제품소개</a></li>
-			<li><a href="#">사업영역</a></li>
-			<li><a href="#">고객센터</a></li>
-			<li><a href="#">사회공헌</a></li>
-			<li><a href="#">인재채용</a></li>
-		</ul>
-	</div>
+		<div class="gnbWrap"> <!-- 100% -->
+			<nav class="gnbMenu"> <!-- 980px -->
+				<ul>
+						<li><a href="#">회사소개</a></li>
+						<li><a href="#">제품소개</a></li>
+						<li><a href="#">사업영역</a></li>
+						<li><a href="#">고객센터</a></li>
+						<li><a href="#">사회공헌</a></li>
+						<li><a href="#">인재채용</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 	<div class="visualWrap">
-		<div class="visualWrap2">
 		<div class="visual">
-			<img class="vTitle" src="Images/Untitled1.png" alt="title">
-			<img class="light" src="Images/light01.png" alt="light">
+			<img src="images/light01.png" alt="" class="light">
+			<img src="images/title01.png" alt="" class="vTitle">
 		</div>
 	</div>
 	<div class="section">
+		<!-- ul.card>li*5 -->
 		<ul class="card">
-			<li><img src="Images/icon01.png" alt="사회공헌"><h3>사회공헌</h3><p>소외된 이웃과 함께합니다.</p></li>
-			<li><img src="Images/icon02.png" alt="윤리경영"><h3>윤리경영</h3><p>공정한 경쟁을 추구합니다.</p></li>
-			<li><img src="Images/icon03.png" alt="인재채용"><h3>인재채용</h3><p>열정 넘치는 인재를 모십니다.</p></li>
-			<li><img src="Images/icon04.png" alt="기업문화"><h3>기업문화</h3><p>유자의 가치를 소개합니다.</p></li>
-			<li><img src="Images/icon05.png" alt="사회공헌"><h3>사회공헌</h3><p>유자는 미래를 선도합니다.</p></li>
+			<li>
+				<img src="images/icon01.png"alt="">
+				<h3>사회공헌</h3> 
+				<p>소외된 이웃과 함께합니다.</p>
+			</li>
+			<li>
+				<img src="images/icon02.png"alt="">
+				<h3>윤리경영</h3> 
+				<p>공정한 경쟁을 추구합니다.</p>
+			</li>
+			<li>
+				<img src="images/icon03.png"alt="">
+				<h3>인재채용</h3> 
+				<p>열정 넘치는 인재를 모십니다.</p>
+			</li>
+			<li>
+				<img src="images/icon04.png"alt="">
+				<h3>기업문화</h3> 
+				<p>유자의 가치를 소개합니다.</p>
+			</li>
+			<li>
+				<img src="images/icon05.png"alt="">
+				<h3>비전</h3> 
+				<p>유자는 미래를 선도합니다.</p>
+			</li>
 		</ul>
 	</div>
 	<div class="conWrapOne">
 		<ul class="card clearfix">
-			<li onclick="location.href='http://www.naver.com'"><img src="images/banner01.jpg" alt="" class="cardImg"><div class="cardbody"><h3>회사 개요</h3><p>유자에너지는 태양열발전 등 그린에너지와 바이오 사업을 통해 신성장통력을 강화하고 있습...</p></div></li>
-			<li><img src="images/banner02.jpg" alt="" class="cardImg"><div class="cardbody"><h3>사업분야</h3><p>풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다. 장기적인 비전을 통한 끊임없는 성장...</p></div></li>
-			<li><img src="images/banner03.jpg" alt="" class="cardImg"><div class="cardbody"><h3>환경경영</h3><p>유자에너지는 태양열발전 등 그린에너지와 바이오 사업을 통해 신성장통력을 강화하고 있습...</p></div></li>
+			<li onclick="location.href='http://www.naver.com'"> <!-- 클릭 페이지이동  -->
+				<img src="images/banner01.jpg" alt="" class="cardImg">
+				<div class="cardBody">
+					<h3>회사개요</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+					</p>
+				</div>
+			</li>
+			<li>
+				<img src="images/banner02.jpg" alt="" class="cardImg">
+				<div class="cardBody">
+					<h3>사업분야</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					</p>
+				</div>
+			</li><li>
+				<img src="images/banner03.jpg" alt="" class="cardImg">
+				<div class="cardBody">
+					<h3>환경경영</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					</p>
+				</div>
+			</li>
 		</ul>
 	</div>
 	<div class="conWrapTwo">
 		<ul class="card clearfix">
-			<li><img src="images/bannericon01.png" alt="icon1"><div class="card_body">
-				<h3>사보</h3><p>풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다.</p><a href="#">자세히보기→</a></div></li>
-			<li><img src="images/bannericon02.png" alt="icon3"><div class="card_body">
-				<h3>찾아오시는 길</h3><p>풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다.</p><a href="#">자세히보기→</a></div></li>
-			<li><img src="images/bannericon03.png" alt="icon3"><div class="card_body">
-				<h3>제품정보</h3><p>풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다.</p><a href="#">자세히보기→</a></div></li>
+			<li>
+				<img src="images/banner_icon_01.png" alt="">
+				<div class="card_body">
+					<h3>사보</h3>
+					<p>Lorem ipsum dolor sit amet, consec<br>tetur adipisicing elit.</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li><li>
+				<img src="images/banner_icon_02.png" alt="">
+				<div class="card_body">
+					<h3>찾아오시는 길</h3>
+					<p>Lorem ipsum dolor sit amet, consec<br>tetur adipisicing elit.</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li><li>
+				<img src="images/banner_icon_03.png" alt="">
+				<div class="card_body">
+					<h3>제품정보</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur </p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
 		</ul>
 	</div>
-
-<footer id="footer">
-	<div class="footerTopWrap"> <!-- 100% -->
-		<div class="footerTop"> <!-- 980 -->
-			<ul class="clearfix">
-				<li><a href="#">개인정보 취급방침</a></li>
-				<li><a href="#">이메일주소 무단수집거부</a></li>
-				<li><a href="#">패밀리 사이트</a></li>
-			</ul>
-			<div class="top"></div>
+	<!-- footer#footer -->
+	<footer id="footer">
+		<div class="footerTopWrap">  <!-- 100% -->
+			<div class="footerTop">  
+					<li><a href="#">개인정보 취급방침</a></li>
+					<li><a href="#">이메일주소 무단 수집 거부</a></li>
+					<li><a href="#">패밀리 사이트</a></li>
+				</ul>
+				<div class="top"></div>
+					
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="footerBottomWrap clearfix"> <!-- 980 -->
-		<div class="logo">하이미디어</div>
-		<div class="copy">
-			<p>하이미디어</p><br>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, consequuntur.</p>
-			<p>Lorem ipsum dolor sit amet.</p>
-			<p>Copyright(C)2020. himedia All Right Reserved.</p>
+		<div class="footerBottomWrap clearfix"><!-- 980 -->
+				<ul class="clearfix">
+			<div class="logo">하이미디어</div>
+			<div class="copy">
+				<p>하이미디어</p>
+				<p>Lorem ipsum dolor sit ametadipisicing elit. Eius, voluptatum.</p>
+				<p>Lorem ipsum dolor. Eius, voluptatum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, voluptatum.</p>
+			</div>
 		</div>
-	</div>
-</footer>
+	</footer>
+	
 </body>
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{background-image:url(../images/bg_grid.gif);}
+		.boxWrap{
+			width: 410px;_height: 210px;
+			background-color:skyblue;
+		}
+		.boxWrap .box1,
+		.boxWrap .box2{
+			width: 200px;height: 200px;color:white;
+			float: left;
+		}
+
+		.boxWrap .box1{background-color:red;}
+		.boxWrap .box2{background-color:blue;}
+		.box3{height: 200px;background-color:pink;}
+		.boxWrap .clear{height: 10px;clear:both;}
+
+		
+		.clearfix:after{content:"";clear: both;display: block;}
+
+		.box3:after{content:"입니다.";display: block;}
+		.box3:before{content:"핑크는 ";display: block;}
+	</style>
+</head>
+<body>
+	<div class="boxWrap clearfix">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<!-- <div class="clear"></div> -->
+	</div>
+
+	<div class="box3">box3</div>
+
+<style>
+	.pink{background-color:pink;}
+	.red{background-color:#f00;}
+	.skyblue{background-color:skyblue;}
+
+	.wrap1{
+		width: 1000px;margin:10px auto;
+	}
+	.wrap1 .left,
+	.wrap1 .right{width: 100px;height: 100px;}
+	.wrap1 .left{float: left;}
+	.wrap1 .right{float: right;}
+</style>
+<h3>1.float</h3>
+<div class="wrap1 red clearfix">
+	<div class="left skyblue">left</div>
+	<div class="right pink">right</div>
+</div>
+<style>
+	.wrap2{width: 1000px;margin: 0 auto}
+	.wrap2 li{float: left;width: 20%;}
+	.wrap2 li>a{
+		display: block;
+		text-align: center;
+		line-height: 40px;
+	}
+	.wrap2 li>a:hover{background-color:blue;color:white;}
+
+</style>
+<h3>2. float nav</h3>
+<div class="wrap2 red">
+	<ul class="clearfix">
+		<li><a href="#">menu1</a></li>
+		<li><a href="#">menu2</a></li>
+		<li><a href="#">menu3</a></li>
+		<li><a href="#">menu4</a></li>
+		<li><a href="#">menu5</a></li>
+	</ul>
+</div>
+
+</body>
+</html>

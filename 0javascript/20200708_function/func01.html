@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>function</title>
+	<script>
+		function gugu(x){
+			// var x = 2;
+			// document.write(x + "x 1="+ x*1 + "<br>")
+			// document.write(x + "x 2="+ x*2 + "<br>")
+			// document.write(x + "x 3="+ x*3 + "<br>")
+			// document.write(x + "x 4="+ x*4 + "<br>")
+			// document.write(x + "x 5="+ x*5 + "<br>")
+			// document.write(x + "x 6="+ x*6 + "<br>")
+			// document.write(x + "x 7="+ x*7 + "<br>")
+			// document.write(x + "x 8="+ x*8 + "<br>")
+			// document.write(x + "x 9="+ x*9 + "<br>")
+		
+			for(var i=1;i<=9;i++){
+				document.write(x + " x " + i + " = " + x*i + "<br>");
+			}
+		}
+		
+
+		var result;	
+		function add(x,y){
+			var sum = 0;
+			sum = x * y;
+			// document.write(sum);
+			return sum;
+		}
+	</script>
+</head>
+<body>
+	<!-- <div class="box">
+		<script>
+			gugu(5);
+		</script>
+	</div> -->
+	<button type="button" onclick="gugu(5)">구구단 5단</button>
+	<div onclick="gugu(4)">구구단 4단</div>
+	<a href="#" onclick="gugu(3)">구구단 3단</a><br>
+	<a href="javascript:gugu(2)">구구단 2단</a><br>
+
+	<script>
+		result = add(60,20);
+		document.write("곱한값은 "+result+"입니다.");
+	</script>
+</body>
+</html>

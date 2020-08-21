@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>sprite</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/*body{background-color: skyblue;}*/
+		.logo{
+			width: 445px;
+			height: 110px;
+			background-image: url(../images/sprite_naver.png);
+			background-position:0 -317px;  /*bg좌표*/
+			background-repeat: no-repeat; /*bg패턴반복여부 */
+			margin: 0 auto;
+		}
+		.logo a{
+			display: block;
+			line-height: 110px;
+			text-indent: -9000px; /*들여쓰기 임시글씨가보이지않게 멀리보낸거임*/
+		}
+		
+
+		.j_naver{
+			width: 130px;height: 30px;
+			background-image: url(../images//sprite_naver.png);
+			background-repeat: no-repeat;
+			background-position: -690px -516px;
+			transition: 0.3s;
+		}
+		.j_naver:hover{
+			background-position: -422px -612px;
+		}
+		.j_naver a{
+			display: block;
+			line-height: 30px;
+			text-indent: -9999px;
+		}
+		
+
+		.btn{
+			width: 100px;height: 100px;
+			background-image: url(../images//sprite_naver.png);
+			background-repeat: no-repeat;
+			background-position: -420px -435px;
+		}
+		.btn:hover{
+			background-position: -310px -435px
+		}
+		.btn a{
+			display: block;
+			line-height: 100px;
+			text-indent: -9999px;
+		}
+
+		.nav{width: 980px;margin: 0 auto;}
+		.nav ul{}
+		.nav ul>li{
+			float: left;width: 140px;height: 50px;
+			background-image: url(../images/sprites.png);
+			background-repeat: no-repeat;
+			transition: 0.3s; /*애니메이션효과*/
+		}
+		.nav li a{
+			display: block;
+			line-height: 50px;
+			text-indent: -9999px;
+		}
+		.nav li:nth-child(1){background-position: 0 0;}
+		.nav li:nth-child(2){background-position:-140px 0;}
+		.nav li:nth-child(3){background-position:-280px 0;}
+		.nav li:nth-child(4){background-position:-420px 0;}
+		.nav li:nth-child(5){background-position:-560px 0;}
+		.nav li:nth-child(6){background-position:-700px 0;}
+		.nav li:nth-child(7){background-position:-840px 0;}
+		
+		.nav li:nth-child(1):hover{background-position: 0 -50px;}
+		.nav li:nth-child(2):hover{background-position:-140px -50px;}
+		.nav li:nth-child(3):hover{background-position:-280px -50px;}
+		.nav li:nth-child(4):hover{background-position:-420px -50px;}
+		.nav li:nth-child(5):hover{background-position:-560px -50px;}
+		.nav li:nth-child(6):hover{background-position:-700px -50px;}
+		.nav li:nth-child(7):hover{background-position:-840px -50px;}
+		
+		/*미리지정해놓고  li class active지정해서 사용가능*/
+		.nav li:nth-child(1).active{background-position: 0 -50px;} 
+		.nav li:nth-child(2).active{background-position:-140px -50px;}
+		.nav li:nth-child(3).active{background-position:-280px -50px;}
+		.nav li:nth-child(4).active{background-position:-420px -50px;}
+		.nav li:nth-child(5).active{background-position:-560px -50px;}
+		.nav li:nth-child(6).active{background-position:-700px -50px;}
+		.nav li:nth-child(7).active{background-position:-840px -50px;}
+	</style>
+</head>
+<body>
+	<!-- <div class="logo">
+		
+	</div> -->
+	<h1 class="logo"><a href="#">네이버</a></h1>
+	<div class="j_naver">
+		<a href="#">주니어네이버</a>
+	</div>
+	<div class="btn">
+		<a href="#">업버튼</a>
+	</div>
+
+	<div class="nav">
+		<!-- ul>li*7>a[#]>{menu$} -->
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+			<li><a href="#">menu6</a></li>
+			<li  class="active"><a href="#">menu7</a></li>
+			
+		</ul>
+	</div>
+
+</body>
+</html>

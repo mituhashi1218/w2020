@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		.box{width: 300px;height: 300px;background:skyblue;position: relative;}
+		.box:after{content:"";border-width:20px;border-style:solid;
+		border-color:transparent transparent transparent skyblue;position: absolute;top: 0;right: -40px;top: 50%;transform:translateY(-50%);}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

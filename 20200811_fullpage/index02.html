@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/colorbox.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script>
+		$(function(){
+			$(".fullpage_bbs,.fullpage_bbs1").colorbox({
+				iframe:true,width:"80%",height:"50%"
+				// innerWidth:800,innerHeight:400
+			});
+
+			$("#fullpage").fullpage({
+				anchors:["a1st","a2st","a3st","a4st"],
+				menu:"#topMenu",
+				navigation:true,
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+","+index);
+					if(index ==1){
+						$("#onViewOne").addClass("move");
+					}else{
+						$("#onViewOne").removeClass("move");
+					}
+					if(index ==2){
+						$("#onViewTwo").addClass("move");
+					}else{
+						$("#onViewTwo").removeClass("move");
+					}
+				}
+			});
+		});
+
+	</script>
+	<style>
+		#page1{background-image: url(images/bg1.jpg);}
+		#page2{background-image: url(images/bg2.jpg);}
+		#page3{background-image: url(images/bg3.jpg);}
+		#page4{background-image: url(images/bg4.jpg);}
+
+		.section{background-repeat:no-repeat;
+			background-position: center;
+			background-size:cover;}
+		nav#navTop{background:gray;position: fixed;z-index:1;width: 100%;}
+		nav#navTop ul li{width: 100px;float: left;}
+		nav#navTop ul li a{display: block;line-height: 50px;text-align: center;padding: 0 10px;}
+
+		nav#navTop li.active{background:skyblue;}
+		.scroll{position: absolute;left: 50%;transform:translateX(-50%);
+			bottom: 20px;animation:xScroll 0.8s infinite alternate;}
+		@keyframes xScroll{
+			from{bottom: 20px;}
+			to{bottom: 40px;}
+		}
+		.main{width: 400px;position: absolute;left: 50%;transform:translateX(-50%);color:white;text-align: center;}
+		.main h3{font-size:3em;}
+		.main a{display: block;width: 150px;border: 1px solid #fff;line-height: 35px;color:white;border-radius:18px;margin:0 auto;}
+		.main a:hover{background:#fff;color:#000;}
+
+		#onViewOne{top: 10%;transition:0.3s;opacity: 0;}
+		#onViewOne.move{top: 30%;opacity: 1;}
+
+		#onViewTwo{top: 10%;transition:0.3s;opacity: 0;}
+		#onViewTwo.move{top: 30%;opacity: 1;}
+
+		.f3em{font-size: 3em !important;}
+		.f25em{font-size: 2.5em !important;}
+		.f2em{font-size: 2em !important;}
+		.f15em{font-size: 1.5em !important;}
+		.mb20{margin-bottom: 20px !important;}
+		
+		.slide{position: relative;}
+		.slide .view{position: absolute;width: 500px;height: 500px;background:skyblue;left: 50%;top: 50%;
+			transform:translate(-50%,-50%);}
+
+	</style>
+</head>
+<body>
+	<nav id="navTop">
+		<ul id="topMenu" class="clearfix">
+			<li data-menuanchor="a1st"><a href="#a1st">MENU1</a></li>
+			<li data-menuanchor="a2st"><a href="#a2st">MENU2</a></li>
+			<li data-menuanchor="a3st"><a href="#a3st">MENU3</a></li>
+			<li data-menuanchor="a4st"><a href="#a4st">MENU4</a></li>
+		</ul>
+	</nav>
+	<div id="fullpage">
+		<div class="section" id="page1" data-anchor="a1st">
+			<div class="main" id="onViewOne">
+				<h3 class="f25em">Lorem ipsum.</h3>
+				<p class="f15em mb20">Lorem ipsum dolor sit.</p>
+				<a href="#">MORE</a>
+			</div>
+			<div class="scroll">
+				<a href="#a2st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>
+		</div>
+		<div class="section" id="page2" data-anchor="a2st">
+			<div class="main" id="onViewTwo">
+				<h3 class="f25em">Lorem ipsum.</h3>
+				<p class="f15em mb20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, officia..</p>
+				<a href="http://mituhashi1218.dothome.co.kr/main/bbs/board.php?bo_table=fullpage_bss01" class="fullpage_bbs">MORE</a>
+
+				<a href="http://mituhashi1218.dothome.co.kr/main/bbs/board.php?bo_table=fullpage_gall_bbs01" class="fullpage_bbs1" style="margin-bottom:10px;">MORE</a>
+			</div>
+			<div class="scroll">
+				<a href="#a3st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>
+		</div>
+		<div class="section" id="page3" data-anchor="a3st"></div>
+		<div class="section" id="page4" data-anchor="a4st">
+			<div class="slide">
+				<div class="view">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quae asperiores minus minima doloribus laboriosam modi facilis non et dicta ratione, voluptas ad officiis enim earum laudantium culpa maxime illum.</div>
+			</div>
+			<div class="slide">
+				<div class="view">Delectus fugit velit alias sunt ducimus sint ullam expedita voluptas illum architecto commodi, doloremque voluptates quasi adipisci, minus facere nobis molestiae hic necessitatibus. Nostrum libero reprehenderit ipsam voluptatem, facilis, labore?</div>
+			</div>
+			<div class="slide">
+				<div class="view">Accusamus mollitia aperiam, iste illum porro est dolorum beatae doloribus deleniti repudiandae et quae obcaecati sint, dolore dolores eius reprehenderit impedit. Minus, voluptatibus praesentium quos! Quos possimus, culpa aperiam similique.</div>
+			</div>
+		</div>
+		<div class="section fp-auto-height" data-anchor="a5st">
+			<div class="footer" style="height:100px;background-color:skyblue;"></div>
+		</div>
+	</div>
+</body>
+</html>

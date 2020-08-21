@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>sub menu연습</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		nav.gnb{width: 1200px;margin: 0 auto;background: pink}
+		nav.gnb>ul{position: relative;}
+		nav.gnb>ul>li{float: left;width: 25%;}
+		nav.gnb>ul>li>a{display: block;text-align: center;line-height: 40px;}
+		nav.gnb>ul>li:hover{background: skyblue;}
+		nav.gnb>ul>li:nth-child(1) .smenu{display: block;}
+
+
+		.smenu{display: none;}
+
+		.smenu{position: absolute;}
+		.smenu>li{float: left;}
+		.smenu>li>a{display: block;text-align: center;line-height: 30px;width: 100px;}
+	</style>
+</head>
+<body>
+	<nav class="gnb">
+		<ul class="clearfix">
+			<li><a href="#">MENU01</a>
+				<ul class="smenu clearfix">
+					<li><a href="#">smenu0101</a></li>
+					<li><a href="#">smenu0102</a></li>
+					<li><a href="#">smenu0103</a></li>
+					<li><a href="#">smenu0104</a></li>
+				</ul>
+			</li>
+			<li><a href="#">MENU02</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0201</a></li>
+					<li><a href="#">smenu0202</a></li>
+					<li><a href="#">smenu0203</a></li>
+				</ul>
+			</li>
+			<li><a href="#">MENU03</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0301</a></li>
+					<li><a href="#">smenu0302</a></li>
+					<li><a href="#">smenu0303</a></li>
+				</ul>
+			</li>
+			<li><a href="#">MENU04</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0401</a></li>
+					<li><a href="#">smenu0402</a></li>
+					<li><a href="#">smenu0403</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>

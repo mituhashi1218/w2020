@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>selector</title>
+	<style>
+		/*h3{color: brown}*/
+		/*h3,li{color: red;}*/
+		/*reset*/
+		*{padding: 0;margin: 0;}
+		a:visited,
+		a:link{color: #000;text-decoration: none}
+	
+		
+		/*header*/
+		.main{background-color: #ff0;}
+		.warning{color: #f00}
+		#list{background-color:mistyrose;}
+		#list>li{color:gray;}
+		#list>li.active{color: #f00;}
+		div>strong{background-color: white}
+		ul>li>strong{background-color: #000
+		}
+		#list>li:hover{background-color: #ddd;}
+		#list>li:active{background-color: #f00; color:#fff;}
+
+	</style>
+</head>
+<body class="main">
+	<h3>Lorem ipsum dolor.</h3>
+	<hr>
+	<div>
+		<div>Lorem <strong>ipsum</strong> dolor.</div>
+		<ul id="list">
+			<li class="active">
+				<a href="http:www.naver.com">네이버</a>
+			</li>
+			<li ><a href="http:www.daum.net">다음</a></strong></li>
+			<li>javascript</li>
+		</ul>
+		<div class="warning">Lorem ipsum dolor sit.</div>
+	</div>
+</body>
+</html>

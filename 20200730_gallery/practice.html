@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<style>
+		#gallery{width: 824px;height: 600px;margin:50px auto;background: #ccc;}
+		#image{width: 760px;height: 470px;margin:0 auto;margin-bottom: 20px;}
+		#image p{display:none;}
+		#thumbnail{width:824px;height: 95px;}
+		#thumbnail div{float: left;}
+		#thumbnail div.left, 
+		#thumbnail div.right{width:32px;line-height: 50;}
+		#thumbnail div.right img{float: right;}
+		.container{width: 760px;height: 95px;position: relative;overflow: hidden;}
+		.container ul{width: 2280px;position: absolute;left: 0;}
+		.container ul li{float: left;width:120px;height: 95px;margin-left:40px;text-align: center;}
+		.ml0{margin-left: 0 !important;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("#thumbnail li").click(function(){
+				var i = $(this).index();
+				console.log(i);
+				$("#image>p").hide().eq(i).show();
+			});
+			var current = 0;
+			$(".right").click(function(){
+				current++;
+				if(current==3){current=0};
+				imageMoveNt();
+			});
+			$(".left").click(function(){
+				current++;
+				if(current== -1){current=2};
+				imageMovePv();
+			});
+			function imageMoveNt(){
+				var num = current*760*-1;
+				$(".container>ul").stop().animate({left:num},300);
+			}
+			function imageMovePv(){
+				var num = current*760*2;
+				$(".container>ul").stop().animate({left:num},300);
+			}
+		});
+	</script>
+</head>
+<body>
+	<div id="gallery">
+		<div id="image">
+			<p style="display:block"><img src="images/0.jpg" alt="img0"></p>
+			<p><img src="images/1.jpg" alt="img1"></p>
+			<p><img src="images/2.jpg" alt="img2"></p>
+			<p><img src="images/3.jpg" alt="img3"></p>
+			<p><img src="images/4.jpg" alt="img4"></p>
+			<p><img src="images/5.jpg" alt="img5"></p>
+			<p><img src="images/6.jpg" alt="img6"></p>
+			<p><img src="images/7.jpg" alt="img7"></p>
+			<p><img src="images/8.jpg" alt="img8"></p>
+			<p><img src="images/9.jpg" alt="img9"></p>
+			<p><img src="images/10.jpg" alt="img10"></p>
+			<p><img src="images/11.jpg" alt="img11"></p>
+			<p><img src="images/12.jpg" alt="img12"></p>
+			<p><img src="images/13.jpg" alt="img13"></p>
+			<p><img src="images/14.jpg" alt="img14"></p>
+			<p><img src="images/15.jpg" alt="img15"></p>
+			<p><img src="images/16.jpg" alt="img16"></p>
+			<p><img src="images/17.jpg" alt="img17"></p>
+		</div>
+		<div id="thumbnail" class="clearfix">
+			<div class="left"><img src="images/btn_left.gif" alt=""></div>
+			<div class="container">
+				<ul class="clearfix">
+					<li class="ml0"><img src="images/thumb0.jpg" alt="img0">0</img></li>
+					<li><img src="images/thumb1.jpg" alt="img1">1</img></li>
+					<li><img src="images/thumb2.jpg" alt="img2">2</img></li>
+					<li><img src="images/thumb3.jpg" alt="img3">3</img></li>
+					<li><img src="images/thumb4.jpg" alt="img4">4</img></li>
+
+					<li class="ml0"><img src="images/thumb5.jpg" alt="img5">5</img></li>
+					<li><img src="images/thumb6.jpg" alt="img6">6</img></li>
+					<li><img src="images/thumb7.jpg" alt="img7">7</img></li>
+					<li><img src="images/thumb8.jpg" alt="img8">8</img></li>
+					<li><img src="images/thumb9.jpg" alt="img9">9</img></li>
+
+					<li class="ml0"><img src="images/thumb10.jpg" alt="img10">10</img></li>
+					<li><img src="images/thumb11.jpg" alt="img11">11</img></li>
+					<li><img src="images/thumb12.jpg" alt="img12">12</img></li>
+					<li><img src="images/thumb13.jpg" alt="img13">13</img></li>
+					<li><img src="images/thumb14.jpg" alt="img14">14</img></li>
+
+					<li class="ml0"><img src="images/thumb15.jpg" alt="img15">15</img></li>
+					<li><img src="images/thumb16.jpg" alt="img16">16</img></li>
+					<li><img src="images/thumb17.jpg" alt="img17">17</img></li>
+				</ul>
+			</div>
+			<div class="right clearfix"><img src="images/btn_right.gif" alt=""></div>
+		</div>
+	</div>
+</body>
+</html>

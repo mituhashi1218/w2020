@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>media</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">  <!-- 모바일일때사용 -->
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		ul>li{transition: 1s}
+		ul>li img{width: 100%;}
+       /* 모바일  576 타블렛버전  922이상minwidth pc버전*/
+		@media screen and (max-width: 576px){  /*mobile*/
+			ul>li{float: left;width: 50%;}
+		}
+		@media screen and (min-width: 577px) and (max-width: 922px){  /*tablet*/
+			ul>li{float: left;width: 33.33333%;}
+		}        
+		@media screen and (min-width: 923px){   /*pc*/
+			ul>li{float: left;width: 20%;}
+			.blind{display: none;}
+		}
+		
+	</style>
+</head>
+<body>
+	<ul class="clearfix">
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li class="blind"><img src="../images/testimg.jpg" alt=""></li>
+	</ul>
+<!-- <style>
+	.box{width: 200px;height: 400px;background: skyblue;}	
+	.box img{min-width: 100%;}
+</style>
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+	</div> -->
+</body>
+</html>
