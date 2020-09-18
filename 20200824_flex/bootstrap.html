@@ -1,0 +1,493 @@
+
+
+--------------------------------------------------------------------------------------------------------------
+
+ 0. grid
+:container / row /  .col-sm|md|lg|xl
+.col- (extra small devices - screen width less than 576px)
+.col-sm- (small devices - screen width equal to or greater than 576px)  conatiner-width : 540px
+.col-md- (medium devices - screen width equal to or greater than 768px) conatiner-width :720px
+.col-lg- (large devices - screen width equal to or greater than 992px) conatiner-width : 960px
+.col-xl- (xlarge devices - screen width equal to or greater than 1200px) conatiner-width : 1140px
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4 col-md-3 col-lg-6 bg-primary box">1</div>
+		<div class="col-sm-4 col-md-3 d-lg-none bg-success box">2</div>
+		<div class="col-sm-4 col-md-3 col-lg-6 bg-info box">3</div>
+		<div class="col d-sm-none col-md-3  d-md-block d-lg-none bg-danger box">4</div>
+	</div>
+</div>
+
+--------------------------------------------------------------------------------------------------------------
+
+1. button
+btn-primary / btn-secondary / btn-success / btn-info / btn-warning / btn-dark / btn-link
+<button type="button" class="btn">Basic</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-link">Link</button>
+
+<a href="#" class="btn btn-info" role="button">Link Button</a>
+<div class="btn btn-primary">basic</div>
+<button type="button" class="btn">button</button>
+<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-primary btn-lg">Large</button> 
+btn size : btn-lg / btn-sm / btn-block / active 
+
+--------------------------------------------------------------------------------------------------------------
+
+2. btn-group
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">Apple</button>
+  <button type="button" class="btn btn-primary">Samsung</button>
+  <button type="button" class="btn btn-primary">Sony</button>
+</div>
+btn-group-lg / btn-grounp-vetical / 
+
+
+--------------------------------------------------------------------------------------------------------------
+
+3. btn dropdown 
+: ( dropdown-toggle /  data-toggle="dropdown" / dropdown-menu )
+<div class="btn-group">
+  <button type="button" class="btn btn-primary">Apple</button>
+  <button type="button" class="btn btn-primary">Samsung</button>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+       Sony
+    </button> 
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Tablet</a>
+      <a class="dropdown-item" href="#">Smartphone</a>
+    </div>
+  </div>
+</div>
+
+
+--------------------------------------------------------------------------------------------------------------
+
+4. badge
+<button type="button" class="btn btn-primary">
+    Messages <span class="badge badge-light">4</span>
+  </button>
+  <button type="button" class="btn btn-danger">
+    Notifications <span class="badge badge-light">7</span>
+  </button>
+
+--------------------------------------------------------------------------------------------------------------
+
+5.nav
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+
+--------------------------------------------------------------------------------------------------------------
+
+6.nav tabs / pills
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul>
+
+--------------------------------------------------------------------------------------------------------------
+
+7. Dynamic Tabs
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane container active" id="home">...</div>
+  <div class="tab-pane container fade" id="menu1">...</div>
+  <div class="tab-pane container fade" id="menu2">...</div>
+</div>
+
+
+--------------------------------------------------------------------------------------------------------------
+
+8.card
+0 - sets margin or padding to 0
+1 - sets margin or padding to .25rem (4px if font-size is 16px)
+2 - sets margin or padding to .5rem (8px if font-size is 16px)
+3 - sets margin or padding to 1rem (16px if font-size is 16px)
+4 - sets margin or padding to 1.5rem (24px if font-size is 16px)
+5 - sets margin or padding to 3rem (48px if font-size is 16px)
+auto - sets margin to auto
+
+
+카드기본구조
+<div class="card">
+  <div class="card-header">Header</div>
+  <div class="card-body">Content</div> 
+  <div class="card-footer">Footer</div>
+</div>
+
+카드body
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text">Some example text. Some example text.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+
+카드디자인
+<div class="card" style="width:400px">
+  <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title">한성용</h4>
+    <p class="card-text">Some example text.</p>
+    <a href="#" class="btn btn-primary">See Profile</a>
+  </div>
+</div>
+
+카드레이아웃
+<div class="container mt-3 p-0">
+		<div class="row m-0">
+			<div class="col-md-3 col-sm-6 p-1">
+				<div class="card">
+				  <img class="card-img-top" src="./images/testimg.jpg" alt="Card image">
+				  <div class="card-body">
+				    <h4 class="card-title">한성용</h4>
+				    <p class="card-text">ceo</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 p-1">
+				<div class="card " style="position:relative">
+				  <img class="card-imgtop" src="./images/testimg.jpg" alt="Card image">
+				  <div class="card-img-overlay bg-primary">
+				    <h4 class="card-title">한성용1</h4>
+				    <p class="card-text">ceo</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 p-1">
+				<div class="card">
+				  <img class="card-img-top" src="./images/testimg.jpg" alt="Card image">
+				  <div class="card-body">
+				    <h4 class="card-title">한성용</h4>
+				    <p class="card-text">ceo</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 p-1">
+				<div class="card">
+				 
+				  <div class="card-body">
+				    <h4 class="card-title">한성용</h4>
+				    <p class="card-text">ceo</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				   <img class="card-img-bottom" src="./images/testimg.jpg" alt="Card image">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+카드 ect card-img-top / card-img-bottom / card-img-overlay
+<div class="container mt-3 p-0">
+		<div class="row m-0">
+			<div class="col-md-3 col-sm-6 p-1">
+				<div class="card">
+				  <img class="card-img-top" src="./images/testimg.jpg" alt="Card image">
+				  <div class="card-body card-primary">
+				    <h4 class="card-title">한성용</h4>
+				    <p class="card-text">ceo</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 p-1">
+				<div class="card">
+				  <img class="card-img-top" src="./images/testimg.jpg" alt="Card image">
+				  <div class="card-body">
+				    <h4 class="card-title">한성용</h4>
+				    <p class="card-text">ceo</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 p-1">
+				<div class="card">
+				  <img class="card-img-top" src="./images/testimg.jpg" alt="Card image">
+				  <div class="card-body">
+				    <h4 class="card-title">한성용</h4>
+				    <p class="card-text">ceo</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 p-1">
+				<div class="card">
+				  <img class="card-img-top" src="./images/testimg.jpg" alt="Card image">
+				  <div class="card-body">
+				    <h4 class="card-title">한성용</h4>
+				    <p class="card-text">ceo</p>
+				    <a href="#" class="btn btn-primary">See Profile</a>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+--------------------------------------------------------------------------------------------------------------
+
+
+9. 슬라이드
+<div class="container-fluid p-0">
+		<div id="demo1" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo1" data-slide-to="0" class="active"></li>
+    <li data-target="#demo1" data-slide-to="1"></li>
+    <li data-target="#demo1" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/bg-top.jpg" alt="Los Angeles">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/bg-top.jpg" alt="Chicago">
+    </div>
+    <div class="carousel-item">
+      <img src="./images/bg-top.jpg" alt="New York">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo1" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+</div>
+
+
+--------------------------------------------------------------------------------------------------------------
+
+9.collapse(무너지다/붕괴하다)
+data-toggle="collapse" /  대상 class="collapse"
+href="#demo" / data-target="#demo" -> id="demo" 
+
+<button data-toggle="collapse" data-target="#demo">아코디언메뉴</button>
+
+<a href="#demo" class="btn btn-primary" data-toggle="collapse">아코디언메뉴</a>
+
+<div id="demo" class="collapse">
+Lorem ipsum dolor text....
+</div>
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+10. 아코디언
+
+<div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        <div class="card-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        Collapsible Group Item #2
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container mt-2">
+		<div id="accordion1">
+			<ul class="list-group">
+				<li class="list-group-item">
+					
+					<a href="#demo1" data-toggle="collapse">아코디언메뉴1</a>
+
+					<div id="demo1" class="collapse" data-parent="#accordion1">
+					1Lorem ipsum dolor text....
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#demo2" data-toggle="collapse">아코디언메뉴2</a>
+
+					<div id="demo2" class="collapse" data-parent="#accordion1">
+					2Lorem ipsum dolor text....
+					</div>
+				</li>
+				<li class="list-group-item">
+					
+					<a href="#demo3" data-toggle="collapse">아코디언메뉴3</a>
+
+					<div id="demo3" class="collapse" data-parent="#accordion1">
+					3Lorem ipsum dolor text....
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+--------------------------------------------------------------------------------------------------------------
+
+11. navbar
+.navbar-expand-xl|lg|md|sm 
+.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark and .bg-light
+<nav class="navbar navbar-expand-sm bg-light">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 2</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 3</a>
+    </li>
+  </ul>
+</nav>
+
+#logo
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Logo</a>
+  ...
+</nav>
+
+
+#mobile menu
+.navbar
+.navbar-expand-xl|lg|md|sm
+class="navbar-toggler", data-toggle="collapse" and data-target="#thetarget"
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-toggler" data-toggle="collapse" href="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </a>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> 
+    </ul>
+  </div> 
+</nav>
+
+#navbar sub menu
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Logo</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 2</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+

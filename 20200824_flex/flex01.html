@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flex</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.wrapper{margin-bottom:50px;padding:30px 0;}
+		.wrapper h3{text-align: center;font-size:1.6em;}
+		.intro{padding: 20px 50px;}
+		.img{display: none;}
+
+		.program-list{
+			padding:20px 50px;
+		}
+		.program-list h4{
+			font-size:1.3em;
+			margin-bottom: 20px;
+		}
+
+		.program-list .program{
+			padding:30px;
+			background: #fff;
+			border: 1px solid #aaa;
+			margin-bottom: 20px;
+		}
+
+		.gray{background:#ccc;}
+
+		@media screen and (min-width:764px){
+			.wrapper{
+				width: 1200px;margin: 0 auto;
+			}
+
+			.intro{display: flex;align-items: center}
+			.intro .text{flex:2;padding:0 50px;}
+			.intro .img{flex:1;display: block;display: flex;justify-content: center;align-items: center}
+			
+			.program-list{
+				display: flex;
+				justify-content: space-between;
+			}
+			.program{
+				flex-basis:24%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div class="wrapper">
+			<h3>Lorem ipsum dolor sit.</h3>
+			<div class="intro">
+				<div class="text">
+					<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Saepe qui recusandae quos deserunt sequi dicta quidem natus odit quibusdam maiores?
+					Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Saepe qui recusandae quos deserunt sequi dicta quidem natus odit quibusdam maiores?</p>
+				</div>
+				<div class="img">
+					<img src="images/coding.png" alt="" width="250">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gray">
+		<div class="wrapper">
+			<h3>교육프로그램</h3>
+			<div class="program-list">
+				<div class="program">
+					<h4>Lorem, ipsum.</h4>
+					<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Reprehenderit porro omnis accusamus qui, culpa, blanditiis? Enim perspiciatis id veritatis nam.</p>
+				</div>
+				<div class="program">
+					<h4>Lorem, ipsum.</h4>
+					<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Reprehenderit porro omnis accusamus qui, culpa, blanditiis? Enim perspiciatis id veritatis nam.</p>
+				</div>
+				<div class="program">
+					<h4>Lorem, ipsum.</h4>
+					<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Reprehenderit porro omnis accusamus qui, culpa, blanditiis? Enim perspiciatis id veritatis nam.</p>
+				</div>
+				<div class="program">
+					<h4>Lorem, ipsum.</h4>
+					<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Reprehenderit porro omnis accusamus qui, culpa, blanditiis? Enim perspiciatis id veritatis nam.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

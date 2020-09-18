@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flex</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/*.wrapper{width:100vw;background:skyblue;display:flex;align-items:stretch;justify-content:space-between;margin-bottom: 50px;}
+		.wrapper div{width:100px;text-align: center;height: 100px;}
+		div.box1{background:gray;width: 50px;}
+		div.box2{background:magenta;}
+		div.box3{background:aqua;}
+		div.box4{background:orange;}
+		div.box5{background:green;}*/
+
+		.flex{width: 100vw;height: 50vh;display:flex;background:yellow;margin-bottom: 100px;}
+		.flex div{flex:1;display:flex;justify-content:center;align-items:center;transition:.3s;
+			background-position:center;background-size:cover;background-repeat:no-repeat}
+		div.cell1{background-image: url(../images/pc01.jpg);}
+		div.cell2{background-image: url(../images/pc02.jpg);}
+		div.cell3{background-image: url(../images/pc03.jpg);}
+		div.cell4{background-image: url(../images/pc01.jpg);}
+		div.cell5{background-image: url(../images/pc02.jpg);}
+		.flex div:hover{flex:10;}
+
+		.divWrap{background:#ddd;padding-top: 20px;}
+		.divWrap>h2{text-align: center;}
+		.divWrap .container{width: 1000px;margin:0 auto;display:flex;justify-content:space-between;padding: 20px 0;}
+		.container div{width: 240px;border: 1px solid #000;padding: 20px;}
+		.container div h2{margin-bottom: 10px;}
+		.container div p{font-size:14px}
+		
+	</style>
+</head>
+<body>
+	<!-- <div class="wrapper">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+		<div class="box5">5</div>
+	</div> -->
+
+	<div class="flex">
+		<div class="cell1">1</div>
+		<div class="cell2">1</div>
+		<div class="cell3">2</div>
+		<div class="cell4">1</div>
+		<div class="cell5">1</div>
+	</div>
+	<div class="divWrap">
+		<h2>title</h2>
+		<div class="container"> <!-- 1000 -->
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti perferendis excepturi nemo officia ipsum exercitationem et facilis commodi beatae non.</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti perferendis excepturi nemo officia ipsum exercitationem et facilis commodi beatae non.</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti perferendis excepturi nemo officia ipsum exercitationem et facilis commodi beatae non.</p>
+			</div>
+			<div>
+				<h2>Lorem, ipsum.</h2>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti perferendis excepturi nemo officia ipsum exercitationem et facilis commodi beatae non.</p>
+			</div>
+		</div>
+	</div>
+
+	<style>
+	.nav{width: 100vw;background:skyblue;}	
+	.nav ul{width: 1000px;margin:0 auto;display:flex;height: 40px;}
+	.nav ul li{flex:1;text-align: center;background-color:pink;}
+	.nav ul li a{display: block;line-height: 40px;}
+	</style>
+
+	<div class="nav">
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+			<li><a href="#">menu6</a></li>
+		</ul>
+	</div>
+</body>
+</html>
